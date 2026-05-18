@@ -1,6 +1,6 @@
 # PromptForge
 
-Lokaler Projektordner fuer den oeffentlichen ChatGPT `PromptForge`.
+Lokaler Projektordner für den öffentlichen GPT `PromptForge`.
 
 ## ChatGPT-Link
 
@@ -12,20 +12,31 @@ Im Repository liegt dieser GPT unter `Promptgenerator`.
 
 ## Zweck
 
-Dieser GPT erzeugt aus kurzen oder ausfuehrlichen Zielbeschreibungen direkt nutzbare Markdown-Promptvorlagen fuer ChatGPT, Custom GPTs, OpenWebUI, lokale LLMs und API-Workflows.
+Dieser GPT erzeugt aus kurzen oder ausführlichen Zielbeschreibungen direkt nutzbare Markdown-Promptvorlagen für ChatGPT, Custom GPTs, OpenWebUI, lokale LLMs und API-Workflows.
 
 ## Enthaltene Dateien
 
-- `customgpt_infos.md`: Name, Positionierung, Zielgruppe, Gespraechsaufhaenger und Einsatzgebiete.
-- `fachwissen.md`: Prinzipien fuer robuste Promptstruktur, Qualitaet und sichere Ausgaben.
-- `systemprompt.md`: Kernregeln fuer Prompt-Erstellung, Rueckfragen und Ausgabeform.
-- `bootloader.md`: kompakte Steuerdatei fuer die GPT-Hinweise.
-- `icon.png`: Symbolgrafik fuer die GPT-Darstellung.
+- `customgpt_infos.md`: Name, Positionierung, Zielgruppe, Gesprächsaufhänger und Einsatzgebiete.
+- `fachwissen.md`: Prinzipien für robuste Promptstruktur, Qualität und sichere Ausgaben.
+- `systemprompt.md`: Kernregeln für Prompt-Erstellung, Rückfragen und Ausgabeform.
+- `bootloader.md`: kompakte Steuerdatei für die GPT-Hinweise.
+- `icon.png`: Symbolgrafik für die GPT-Darstellung.
 
 ## Typische Nutzung
 
-Geeignet fuer wiederverwendbare Promptvorlagen in Business, Unterricht, Recherche, Coding, Support, Dokumentation und Automatisierung.
+Geeignet für wiederverwendbare Promptvorlagen in Business, Unterricht, Recherche, Coding, Support, Dokumentation und Automatisierung.
 
-## Fuer Repo-Nutzer
+## Voraussetzungen
 
-Am schnellsten erschliesst sich das Projekt ueber `customgpt_infos.md` und `systemprompt.md`. Fuer direkte Nutzung steht der ChatGPT-Link oben.
+- ChatGPT-Zugang für die direkte Nutzung des öffentlichen GPTs.
+- Klarer Zielkontext für den Prompt, zum Beispiel Aufgabe, Zielgruppe, Eingaben und gewünschte Ausgabeform.
+- Markdown-Grundkenntnisse für die lokale Weiterbearbeitung der Vorlagen.
+
+## Für Repo-Nutzer
+
+Am schnellsten erschließt sich das Projekt über `customgpt_infos.md` und `systemprompt.md`. Für direkte Nutzung steht der ChatGPT-Link oben.
+
+## Hinweise
+
+- Promptvorlagen sollten vor der Wiederverwendung mit realistischen Beispieldaten getestet werden.
+- Technische Zielsysteme wie OpenWebUI, lokale LLMs oder API-Workflows können eigene Format- und Sicherheitsanforderungen haben.
