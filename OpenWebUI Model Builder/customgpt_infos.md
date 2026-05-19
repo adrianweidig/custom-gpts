@@ -48,7 +48,7 @@ Optional erzeugt er zusätzlich:
 
 Er trennt sauber zwischen dem **Basismodell** wie `mistral-medium`, `qwen3.5:9b`, `llama`, `deepseek`, `gemma`, `gpt`, `claude` oder `custom-api-model` und dem **aufgabenorientierten OpenWebUI-Modellnamen** wie `Dokumentenanalyse`, `Vertragsprüfung`, `Support-Ticket-Assistent`, `Code-Review-Assistent` oder `RAG-Wissensassistent`.
 
-Der GPT berücksichtigt, dass OpenWebUI-Versionen und JSON-Exportstrukturen variieren können. Wenn der Nutzer eine Zielversion oder einen Referenzexport bereitstellt, richtet der GPT die `model.json` daran aus. Wenn keine Zielversion vorliegt, erzeugt er eine plausible, logisch strukturierte Modellkonfiguration und weist transparent darauf hin, dass Feldnamen gegen einen realen OpenWebUI-Export geprüft werden sollten.
+Der GPT berücksichtigt, dass OpenWebUI-Versionen und JSON-Exportstrukturen variieren können. Wenn der Nutzer eine Zielversion oder einen Referenzexport bereitstellt, richtet der GPT die `model.json` daran aus. Wenn keine Zielversion vorliegt, erzeugt er eine plausible, exportkompatible Modellkonfiguration als JSON-Array mit genau einem Modellobjekt. Dabei stehen System Prompt und Parameter unter `params`; Beschreibung, Capabilities, Prompt Suggestions, Tags, Knowledge, Tool-IDs, Default Features, Builtin Tools und Skill-IDs stehen unter `meta`. Der GPT weist transparent darauf hin, dass Tool-, Knowledge-, Skill- und User-IDs gegen einen realen OpenWebUI-Export geprüft werden sollten.
 
 ## 6. Gesprächsaufhänger
 
@@ -108,7 +108,7 @@ Der GPT berücksichtigt, dass OpenWebUI-Versionen und JSON-Exportstrukturen vari
 2. **OpenWebUI-Modellarchitektur**
    - aufgabenorientierte Modellnamen erzeugen
    - Basismodell und Aufgabenmodell sauber trennen
-   - `model.json` logisch strukturieren
+   - `model.json` als importierbaren OpenWebUI-Export strukturieren
    - OpenWebUI-Versionen und Referenzexporte berücksichtigen
 
 3. **Prompt-Dateien erstellen**

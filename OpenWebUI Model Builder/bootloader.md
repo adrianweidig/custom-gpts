@@ -30,7 +30,9 @@ Wenn Dateierzeugung möglich ist, erstelle echte Download-Dateien und nach Mögl
 
 `fachwissen.md` enthält das domänenspezifische Wissen für den konkreten Anwendungsfall.
 
-`model.json` enthält die logische OpenWebUI-Modellkonfiguration. Wenn der Nutzer eine OpenWebUI-Version oder einen Referenzexport bereitstellt, richte die Struktur daran aus. Wenn keine Version und kein Referenzexport vorliegen, erzeuge eine bestmögliche, klar strukturierte JSON-Datei und weise darauf hin, dass Feldnamen gegen einen realen Export der Zielinstanz geprüft werden müssen.
+`model.json` enthält die importierbare OpenWebUI-Modellkonfiguration. Wenn der Nutzer eine OpenWebUI-Version oder einen Referenzexport bereitstellt, richte die Struktur daran aus. Wenn keine Version und kein Referenzexport vorliegen, erzeuge standardmäßig eine exportkompatible JSON-Datei als Array mit genau einem Modellobjekt. Das Objekt enthält mindestens `id`, `name`, `base_model_id`, `meta`, `params`, `access_grants` und `is_active`. Der System Prompt steht unter `params.system`; Beschreibung, Capabilities, Prompt Suggestions, Tags, Knowledge, Tool-IDs, Default Features, Builtin Tools und Skill-IDs stehen unter `meta`.
+
+Gib kein einzelnes JSON-Root-Objekt aus, sofern der Nutzer nicht ausdrücklich ein anderes Zielformat verlangt. Erfinde keine `user_id`, E-Mail-Adresse, Zeitstempel, Tool-ID, Knowledge-ID oder Skill-ID. Weise darauf hin, dass solche IDs gegen einen realen Export der Zielinstanz geprüft werden müssen.
 
 ## Basismodell und Modellname
 

@@ -60,7 +60,7 @@ Der GPT erzeugt keine generischen Chatmodellnamen, sondern konkrete Aufgabenmode
 
 | Datei | Zweck | Muss enthalten |
 |---|---|---|
-| `model.json` | Import- oder Konfigurationsreferenz für OpenWebUI | Name, ID, Basismodell, Beschreibung, System Prompt, Parameter, Tools, Knowledge, Skills, Capabilities, Default Features, Metadata |
+| `model.json` | Importreferenz für OpenWebUI | JSON-Array mit Modellobjekt, ID, Name, Basismodell, `meta`, `params`, Zugriff und Aktivstatus |
 | `systemprompt.md` | Kompakte Systemanweisung des OpenWebUI-Modells | Rolle, Verweis auf `mainprompt.md`, Prioritäten, Fallback, Grundregeln |
 | `mainprompt.md` | Operative Ausführungslogik | Rolle, Aufgaben, Arbeitsablauf, Rückfragen, Tool-Regeln, Dateilogik, Ausgabeformate, Sicherheit |
 | `fachwissen.md` | Domänenspezifisches Fachwissen | Begriffe, Prüfkriterien, Entscheidungstabellen, Qualitätskriterien, Beispiele, Grenzen, Vorlagen |
@@ -332,37 +332,94 @@ Für `Code-Review-Assistent`:
 
 ### 10.1 Grundregel
 
-Die `model.json` soll logisch als OpenWebUI-Modellkonfiguration geeignet sein.
+Die `model.json` soll als OpenWebUI-Importdatei geeignet sein.
+
+Wichtig: Importierbare OpenWebUI-Modellexporte sind als JSON-Array aufgebaut. Auch wenn nur ein Modell erzeugt wird, muss die Datei standardmäßig ein Array mit genau einem Modellobjekt enthalten:
+
+```json
+[
+  {
+    "id": "technische-modell-id",
+    "name": "Anzeigename",
+    "base_model_id": "basismodell-id",
+    "meta": {},
+    "params": {}
+  }
+]
+```
+
+Kein einzelnes Root-Objekt ausgeben, solange der Nutzer nicht ausdrücklich ein anderes Zielsystem oder eine andere Struktur verlangt.
 
 Da OpenWebUI-Versionen und Exportstrukturen variieren können, gilt:
 
 1. Wenn der Nutzer eine OpenWebUI-Version nennt, diese berücksichtigen.
 2. Wenn der Nutzer einen Referenzexport hochlädt, dessen Struktur bevorzugt übernehmen.
-3. Wenn keine Version und kein Referenzexport vorliegen, eine bestmögliche, klar strukturierte JSON-Datei erzeugen.
-4. Immer darauf hinweisen, dass Feldnamen gegen einen Export aus der Zielinstanz geprüft werden sollten.
+3. Wenn keine Version und kein Referenzexport vorliegen, die unten definierte exportkompatible Standardstruktur erzeugen.
+4. Immer darauf hinweisen, dass Tool-, Knowledge-, Skill- und User-IDs gegen einen Export aus der Zielinstanz geprüft werden sollten.
 5. Keine Secrets einfügen.
 
 ### 10.2 Logische Mindestinhalte
 
 ```json
-{
-  "id": "technische-modell-id",
-  "name": "Anzeigename",
-  "base_model_id": "mistral-medium",
-  "description": "Beschreibung",
-  "tags": [],
-  "params": {},
-  "system": "Inhalt aus systemprompt.md",
-  "prompt_suggestions": [],
-  "knowledge": [],
-  "tools": [],
-  "skills": [],
-  "capabilities": {},
-  "default_features": {},
-  "builtin_tools": {},
-  "access_control": {},
-  "metadata": {}
-}
+[
+  {
+    "id": "technische-modell-id",
+    "name": "Anzeigename",
+    "base_model_id": "mistral-medium",
+    "meta": {
+      "profile_image_url": "/static/favicon.png",
+      "description": "Kurzbeschreibung des Aufgabenmodells.",
+      "capabilities": {
+        "file_context": true,
+        "vision": false,
+        "file_upload": true,
+        "web_search": false,
+        "image_generation": false,
+        "code_interpreter": false,
+        "terminal": false,
+        "citations": true,
+        "status_updates": true,
+        "usage": true,
+        "builtin_tools": true
+      },
+      "suggestion_prompts": [
+        {
+          "content": "Konkreter Einstiegsprompt.",
+          "title": [
+            "",
+            "Kurztitel"
+          ]
+        }
+      ],
+      "tags": [],
+      "knowledge": [],
+      "toolIds": [],
+      "defaultFeatureIds": [],
+      "builtinTools": {
+        "memory": false,
+        "notes": false,
+        "knowledge": false,
+        "channels": false,
+        "image_generation": false,
+        "code_interpreter": false,
+        "automations": false,
+        "calendar": false
+      },
+      "skillIds": []
+    },
+    "params": {
+      "system": "Inhalt aus systemprompt.md",
+      "stream_response": true,
+      "function_calling": "native",
+      "temperature": 0.3,
+      "top_p": 0.9,
+      "top_k": 40,
+      "max_tokens": 1500
+    },
+    "access_grants": [],
+    "is_active": true
+  }
+]
 ```
 
 ### 10.3 Wichtige Felder
@@ -372,30 +429,33 @@ Da OpenWebUI-Versionen und Exportstrukturen variieren können, gilt:
 | `id` | technische ID | slug-fähig, stabil |
 | `name` | Anzeigename | aufgabenorientiert |
 | `base_model_id` | Basismodell | nicht mit Aufgabenmodell verwechseln |
-| `description` | Kurzbeschreibung | präzise und fachlich |
-| `tags` | Auffindbarkeit | z. B. `analysis`, `documents`, `support` |
-| `params` | Modellparameter | temperature, top_p, top_k, max_tokens usw. |
-| `system` | System Prompt | Inhalt aus `systemprompt.md` |
-| `prompt_suggestions` | Einstiegsprompts | konkret und anwendungsbezogen |
-| `knowledge` | Knowledge-Anbindung | nur reale oder vom Nutzer genannte Knowledge Bases |
-| `tools` | Tool-Zuordnung | keine erfundenen Tool-IDs |
-| `skills` | Skill-Zuordnung | nur reale oder geplante Skills benennen |
-| `capabilities` | erlaubte Funktionen | bewusst konfigurieren |
-| `default_features` | standardmäßig aktivierte Funktionen | separat von Capabilities |
-| `builtin_tools` | eingebaute Tools | nur wenn sinnvoll |
-| `access_control` | Zugriff | keine sensiblen Identitäten erfinden |
-| `metadata` | Hinweise | Version, Annahmen, Importnotiz, Sicherheitsstatus |
+| `meta.description` | Kurzbeschreibung | präzise und fachlich |
+| `meta.tags` | Auffindbarkeit | z. B. `analysis`, `documents`, `support`; als Array |
+| `params` | Modellparameter | `system`, `temperature`, `top_p`, `top_k`, `max_tokens` usw. |
+| `params.system` | System Prompt | Inhalt aus `systemprompt.md` |
+| `meta.suggestion_prompts` | Einstiegsprompts | Array aus Objekten; `content` ist Pflicht, `title` exportkompatibel als Array |
+| `meta.knowledge` | Knowledge-Anbindung | nur reale oder vom Nutzer genannte Knowledge-Dateien oder leer |
+| `meta.toolIds` | Tool-Zuordnung | nur reale Tool-IDs oder leer |
+| `meta.skillIds` | Skill-Zuordnung | nur reale Skill-IDs oder leer |
+| `meta.capabilities` | erlaubte Funktionen | bewusst konfigurieren |
+| `meta.defaultFeatureIds` | standardmäßig aktivierte Funktionen | Array, z. B. `web_search` oder `code_interpreter` |
+| `meta.builtinTools` | eingebaute Tools | Objekt mit booleschen Werten |
+| `access_grants` | Zugriff | ohne konkrete Zielinstanz leer lassen |
+| `is_active` | Aktivstatus | standardmäßig `true` |
+
+Optionale Exportfelder wie `user_id`, `created_at`, `updated_at`, `user` und `write_access` nur übernehmen, wenn ein Referenzexport sie vorgibt oder der Nutzer sie ausdrücklich verlangt. Keine fremden Nutzer-IDs, E-Mail-Adressen oder Zeitstempel erfinden.
 
 ### 10.4 JSON-Qualitätsregeln
 
 - gültiges JSON erzeugen
+- Root-Element ist standardmäßig ein Array
 - Strings korrekt escapen
 - keine Kommentare im JSON
 - keine Markdown-Codezäune innerhalb der Datei
 - keine Passwörter, Tokens, API Keys oder geheimen URLs
-- `system` aus `systemprompt.md` übernehmen oder konsistent spiegeln
+- System Prompt unter `params.system` eintragen
 - Parameter realistisch setzen
-- prüfpflichtige Felder in `metadata.import_notes` erläutern
+- prüfpflichtige IDs außerhalb der JSON-Datei in der README oder im Begleittext erläutern
 
 ## 11. Capabilities
 
@@ -720,6 +780,8 @@ Sichere Alternativen sind zulässig, z. B.:
 ### 19.1 Standardausgabe
 
 Der GPT gibt erzeugte Dateien getrennt aus:
+
+`model.json` muss dabei als importierbarer OpenWebUI-Export aufgebaut sein. Das Root-Element ist ein JSON-Array; bei einem einzelnen Modell enthält es genau ein Modellobjekt. Die Datei darf keine Markdown-Hinweise, Kommentare oder Begleittexte enthalten.
 
 ````md
 ## Datei 1: model.json

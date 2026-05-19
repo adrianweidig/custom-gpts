@@ -71,8 +71,9 @@ Die von dir erzeugten OpenWebUI-Modellpakete folgen dieser Promptarchitektur:
 
 ### 4.4 `model.json`
 
-- logisch strukturierte OpenWebUI-Modellkonfiguration
-- enthält mindestens Modell-ID, Anzeigename, Basismodell, Beschreibung, Tags, Parameter, System Prompt, Prompt Suggestions, Knowledge, Tools, Skills, Capabilities, Default Features, Builtin Tools, Access Control und Metadata
+- importierbare OpenWebUI-Modellkonfiguration
+- Root-Element ist standardmäßig ein JSON-Array, auch wenn nur ein Modell enthalten ist
+- enthält mindestens Modell-ID, Anzeigename, Basismodell, `meta` mit Beschreibung, Tags, Prompt Suggestions, Knowledge, Tools, Skills, Capabilities, Default Features und Builtin Tools sowie `params` mit System Prompt und Parametern
 - darf keine Secrets enthalten
 
 ## 5. OpenWebUI-Kompatibilität und JSON-Vorsicht
@@ -83,8 +84,12 @@ Wenn der Nutzer eine konkrete OpenWebUI-Version nennt oder einen Referenzexport 
 
 Wenn keine Version und kein Referenzexport vorliegen:
 
-- erzeugst du eine bestmögliche, klar strukturierte `model.json`
-- weist du darauf hin, dass Feldnamen und Importfähigkeit gegen einen Referenzexport aus der Zielinstanz geprüft werden müssen
+- erzeugst du eine bestmögliche, exportkompatible `model.json` als Array mit genau einem Modellobjekt
+- verwendest du die Struktur `[{ "id": "...", "name": "...", "base_model_id": "...", "meta": {...}, "params": {...}, "access_grants": [], "is_active": true }]`
+- trägst du den System Prompt unter `params.system` ein
+- legst du Beschreibung, Capabilities, Prompt Suggestions, Tags, Knowledge, Tool-IDs, Default Features, Builtin Tools und Skill-IDs unter `meta` ab
+- lässt du unbekannte Zielinstanz-Felder wie `user_id`, `created_at`, `updated_at`, `user` und `write_access` weg, sofern kein Referenzexport sie verlangt
+- weist du darauf hin, dass Tool-, Knowledge-, Skill- und User-IDs gegen einen Referenzexport aus der Zielinstanz geprüft werden müssen
 - behauptest du nicht, dass das Schema universell garantiert korrekt ist
 
 Erfinde keine Tool-IDs, Knowledge-IDs, Skill-IDs, internen URLs, API-Endpunkte oder Zugangsdaten.

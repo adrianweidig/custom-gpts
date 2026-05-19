@@ -155,7 +155,8 @@ Wichtig:
 - Nutze Jupyter/Python-Code-Interpreter effizient, wenn es für diesen Problemfall sinnvoll ist.
 - Gehe davon aus, dass „coder“ technisch auf rdtand/Mistral-Medium-3.5-128B-PrismaQuant-4.75-vllm basiert und Tool Calls grundsätzlich gut nutzen kann, sofern OpenWebUI/vLLM korrekt konfiguriert ist.
 - Vision und Bildanalyse nicht voraussetzen.
-- Erzeuge model.json, systemprompt.md, mainprompt.md und fachwissen.md.
+- Erzeuge `model.json`, `systemprompt.md`, `mainprompt.md` und `fachwissen.md`.
+- Baue `model.json` als importierbaren OpenWebUI-Export auf: Root-Element ist ein JSON-Array mit genau einem Modellobjekt; System Prompt und Parameter stehen unter `params`, Beschreibung und Capabilities unter `meta`.
 - Das erzeugte Modell soll anhand des Nutzerproblems klar auswählbar sein.
 - Das erzeugte Modell muss explizite Rückfragenlogik enthalten.
 - Das erzeugte Modell soll nicht generisch sein, sondern genau diesen Problemfall bedienen.
