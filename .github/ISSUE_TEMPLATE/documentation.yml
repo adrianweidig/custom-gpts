@@ -1,0 +1,32 @@
+name: Dokumentation verbessern
+description: Melde fehlende, unklare oder widersprüchliche Dokumentation.
+title: "[Docs]: "
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Datei oder Abschnitt
+      description: Welche Dokumentation ist betroffen?
+    validations:
+      required: true
+  - type: textarea
+    id: issue
+    attributes:
+      label: Was sollte verbessert werden?
+      description: Beschreibe die Lücke oder den Widerspruch.
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Konkreter Vorschlag
+      description: Falls du bereits eine Formulierung oder Strukturidee hast, füge sie hier ein.
+    validations:
+      required: false
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Prüfung
+      options:
+        - label: Ich habe geprüft, dass die Meldung keine vertraulichen oder personenbezogenen Informationen enthält.
+          required: true

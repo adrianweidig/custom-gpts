@@ -1,0 +1,78 @@
+name: Repository Health
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  docs-health:
+    name: Documentation and link health
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Validate local Markdown links and required files
+        shell: python
+        run: |
+          from pathlib import Path
+          from urllib.parse import unquote
+          import re
+          import sys
+
+          root = Path(".").resolve()
+          required = [
+              "README.md",
+              "LICENSE",
+              "CONTRIBUTING.md",
+              "SECURITY.md",
+              "SUPPORT.md",
+              "CODE_OF_CONDUCT.md",
+              "CHANGELOG.md",
+              "AGENTS.md",
+          ]
+
+          errors = []
+          for item in required:
+              if not (root / item).exists():
+                  errors.append(f"Missing required repository file: {item}")
+
+          markdown_files = [
+              path for path in root.rglob("*.md")
+              if ".git" not in path.parts
+          ]
+
+          link_pattern = re.compile(r"(!?)\[[^\]]*\]\(([^)]+)\)")
+          for path in markdown_files:
+              text = path.read_text(encoding="utf-8")
+              for match in link_pattern.finditer(text):
+                  raw_target = match.group(2).strip()
+                  if " " in raw_target and not raw_target.startswith("<"):
+                      raw_target = raw_target.split(" ", 1)[0]
+                  raw_target = raw_target.strip("<>")
+                  if not raw_target or raw_target.startswith(("#", "http://", "https://", "mailto:")):
+                      continue
+                  target_without_fragment = raw_target.split("#", 1)[0]
+                  if not target_without_fragment:
+                      continue
+                  target_path = (path.parent / unquote(target_without_fragment)).resolve()
+                  try:
+                      target_path.relative_to(root)
+                  except ValueError:
+                      errors.append(f"{path}: link leaves repository: {raw_target}")
+                      continue
+                  if not target_path.exists():
+                      errors.append(f"{path}: missing local link target: {raw_target}")
+
+          if errors:
+              for error in errors:
+                  print(error)
+              sys.exit(1)
+
+          print(f"Checked {len(markdown_files)} Markdown files.")

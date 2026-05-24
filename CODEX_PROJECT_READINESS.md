@@ -2,7 +2,7 @@
 
 ## Zusammenfassung
 
-Das Projekt wurde im aktuellen Arbeitskontext geprüft. Es ist ein arbeitsfähiges Markdown-/Prompt-Artefakt-Repository ohne zentrale Softwareanwendung, ohne Paketmanager und ohne Build- oder Testframework. Git und GitHub sind eingerichtet und synchron. Es waren keine Initialisierungs- oder Strukturänderungen erforderlich.
+Das Projekt wurde im aktuellen Arbeitskontext geprüft. Es ist ein arbeitsfähiges Markdown-/Prompt-Artefakt-Repository ohne zentrale Softwareanwendung, ohne Paketmanager und ohne fachliches Testframework. Git und GitHub sind eingerichtet. Für öffentliche Nutzung wurden Community-Dokumentation, Issue-/PR-Vorlagen und ein Repository-Health-Workflow ergänzt.
 
 ## Projektroot
 
@@ -26,8 +26,8 @@ Wichtige Inhalte:
 - Repository vorhanden.
 - Aktueller Branch: `main`.
 - Upstream: `origin/main`.
-- Arbeitsbaum vor Erstellung dieses Berichts sauber.
-- Keine untracked Dateien vor Erstellung dieses Berichts gefunden.
+- Arbeitsbaum war vor der Public-Readiness-Überarbeitung sauber.
+- Nach der Überarbeitung enthält der Arbeitsbaum ausschließlich Dokumentations-, GitHub- und Repository-Hygieneänderungen.
 
 ## GitHub-Synchronität
 
@@ -57,10 +57,11 @@ Es ist keine Installation erforderlich.
 
 ## Tests und Builds
 
-Es gibt keinen zentralen Build-, Test-, Lint- oder Typecheck-Prozess. Als passende lokale Prüfungen wurden bzw. werden verwendet:
+Es gibt keinen zentralen Build-, fachlichen Test-, Lint- oder Typecheck-Prozess. Als passende lokale Prüfungen wurden bzw. werden verwendet:
 
 - `git diff --check`
 - `git status --short --branch`
+- Repository-Health-Linkcheck für lokale Markdown-Links und zentrale Community-Dateien
 
 Markdown-Inhalte sind manuell und konservativ zu prüfen, wenn fachliche Prompt-Artefakte geändert werden.
 
@@ -73,8 +74,9 @@ Es gibt keinen Dev-Server und keine zentrale Anwendung. Das Projekt ist direkt �
 Codex kann das Projekt sinnvoll bearbeiten:
 
 - `AGENTS.md` enthält klare Projektregeln.
-- `README.md` beschreibt Struktur, Nutzung und Arbeitsweise.
+- `README.md` beschreibt Struktur, Nutzung, Arbeitsweise und Community-Prozesse.
 - `.gitignore` schließt typische lokale Artefakte, Caches, Logs und `.env`-Dateien aus.
+- `.github/` enthält Issue-/PR-Vorlagen und einen Repository-Health-Workflow.
 - Die Projektstruktur ist klein und nachvollziehbar.
 
 ## Geprüfte alte Pfade
@@ -82,21 +84,27 @@ Codex kann das Projekt sinnvoll bearbeiten:
 Es wurden Suchtreffer für lokale Pfadmuster und Platzhalter geprüft. Die gefundenen lokalen Pfade sind instruktive Negativbeispiele oder Medienregeln, keine offensichtlich veralteten Projektverweise:
 
 - `Präsentationscreator/systemprompt.md`: Verbot lokaler Medienpfade wie `C:\`, `/mnt/`, `file://`
-- `Präsentationscreator/fachwissen.md`: Liste verbotener Ausgaben wie `TODO`, `C:\`, `/mnt/`
+- `Präsentationscreator/fachwissen.md`: Liste verbotener Ausgaben und lokaler Pfadmuster wie `C:\` oder `/mnt/`
 - `Unterrichtsfolien & Handout Builder/layoutrichtlinien.md`: Regel gegen `/mnt/data` und lokale Pfade
 
 Keine Korrektur erforderlich.
 
 ## Durchgeführte Änderungen
 
-- `CODEX_PROJECT_READINESS.md` erstellt, um den aktuellen Prüf- und Endzustand zu dokumentieren.
+- `README.md` öffentlichkeitsreif überarbeitet.
+- Community-Dateien für Contribution, Security, Support, Code of Conduct und Changelog ergänzt.
+- `.github`-Vorlagen, Dependabot-Konfiguration und Repository-Health-Workflow ergänzt.
+- `docs/` mit FAQ, Release-Prozess, Maintainer-Checkliste und Hero-SVG ergänzt.
+- `.editorconfig` und `.gitattributes` ergänzt.
+- `AGENTS.md` an den neuen Repository-Health-Workflow angepasst.
+- GitHub-Description und Topics über GitHub CLI gesetzt.
 
 ## Nicht durchgeführte Änderungen
 
-- Keine Projektstruktur geändert.
+- Keine fachlichen Prompt-Artefakte umformuliert.
 - Keine Abhängigkeiten installiert.
 - Keine Build-, Test- oder Startskripte ergänzt.
-- Keine Prompt-Artefakte umformuliert.
+- Kein CodeQL-Workflow ergänzt, weil das Repository aktuell keine auswertbare Anwendungssprache enthält.
 - Keine Dateien gelöscht.
 - Keine lokalen Backups oder Projektkopien erzeugt.
 
@@ -115,11 +123,11 @@ Keine Korrektur erforderlich.
 
 Keine zwingenden manuellen Aufgaben.
 
-Optional bei künftigen Änderungen:
-
-- Markdown-Links und Tabellen in betroffenen Unterordnern gezielt prüfen.
+- Social Preview auf GitHub hochladen, idealerweise aus `docs/assets/repository-hero.svg`.
+- Private Vulnerability Reporting, Secret Scanning und Branch Protection in GitHub aktivieren.
+- Prüfen, ob Wiki, Projects und Discussions für dieses Repository gewünscht sind.
 - Fachliche und rechtliche Prüfung vor produktiver Veröffentlichung einzelner GPT-Artefakte durchführen.
 
 ## Endzustand
 
-Das Projekt ist direkt arbeitsfähig, GitHub-synchron und für Codex nutzbar. Es wurden keine unnötigen Initialisierungen durchgeführt. Der einzige neue Artefakt ist dieser kompakte Readiness-Bericht.
+Das Projekt ist direkt arbeitsfähig und für öffentliche Nutzung besser vorbereitet. Die vorgenommenen Änderungen betreffen Dokumentation, GitHub-Kollaboration und Repository-Hygiene; der fachliche Kern der GPT-Artefakte blieb unverändert.

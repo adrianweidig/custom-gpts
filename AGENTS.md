@@ -28,10 +28,13 @@ git status --short --branch
 git diff --check
 ```
 
+Der GitHub-Workflow `Repository Health` prüft zentrale Community-Dateien sowie lokale Markdown-Links und Bildpfade.
+
 ## Tests, Build, Linting und Formatierung
 
 - Kein zentrales Testframework vorhanden.
-- Kein Paketmanager, Lockfile oder CI-Workflow vorhanden.
+- Kein Paketmanager oder Lockfile vorhanden.
+- Der vorhandene Repository-Health-Workflow ist ein Dokumentations- und Linkcheck, kein fachlicher Test der GPT-Ausgaben.
 - Kein automatisches globales Formatting ausführen.
 - Markdown-Änderungen manuell auf Überschriften, Tabellen, Links, UTF-8-Umlaute und fachliche Konsistenz prüfen.
 
@@ -41,6 +44,7 @@ git diff --check
 - Deutsche Fließtexte mit echten UTF-8-Umlauten schreiben.
 - Technische Slugs, IDs, Dateinamen, URLs und Modellparameter nicht blind eindeutschen.
 - Prompt-Artefakte eines GPTs gemeinsam betrachten: `README.md`, `customgpt_infos.md`, `systemprompt.md`, `fachwissen.md`, `bootloader.md`.
+- Öffentliche Community-Dateien wie `CONTRIBUTING.md`, `SECURITY.md`, `SUPPORT.md`, `CHANGELOG.md`, `.github/ISSUE_TEMPLATE/*` und `.github/PULL_REQUEST_TEMPLATE.md` konsistent halten, wenn sich Repository-Prozesse ändern.
 - Keine großflächigen Umformulierungen, wenn dadurch Prompt-Verhalten oder fachliche Bedeutung unklar verändert würde.
 - Icons und binäre Assets nicht ohne klaren Auftrag verändern.
 
