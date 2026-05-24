@@ -20,6 +20,7 @@ Diese Datei dokumentiert erledigte Repository-Einstellungen und verbleibende Sch
   - Conversation Resolution erforderlich
   - Force Pushes und Branch-Löschung deaktiviert
 - Social-Preview-PNG erstellt: [`docs/assets/social-preview.png`](assets/social-preview.png)
+- Kuratierter Snapshot-Release `public-readiness-2026-05-24` vorbereitet.
 
 ## GitHub Repository Settings
 
@@ -36,8 +37,8 @@ Diese Datei dokumentiert erledigte Repository-Einstellungen und verbleibende Sch
 
 ## Releases
 
-- Entscheiden, ob versionierte GitHub Releases für kuratierte GPT-Stände gewünscht sind.
-- Wenn ja, Namensschema und Changelog-Prozess festlegen.
+- Für kuratierte Dokumentationsstände wird das Tag-Schema `public-readiness-YYYY-MM-DD` verwendet.
+- SemVer nur einführen, wenn künftig paketartige Artefakte mit klarer Kompatibilitätsaussage entstehen.
 
 ## Lizenz und externe Assets
 

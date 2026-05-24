@@ -99,6 +99,7 @@ Keine Korrektur erforderlich.
 - `.editorconfig` und `.gitattributes` ergänzt.
 - `AGENTS.md` an den neuen Repository-Health-Workflow angepasst.
 - GitHub-Description, Topics, Discussions, Security-Funktionen und Branch Protection über GitHub CLI/API gesetzt.
+- Kuratierter Public-Readiness-Snapshot als GitHub Release vorbereitet.
 
 ## Nicht durchgeführte Änderungen
 
@@ -126,7 +127,6 @@ Keine zwingenden manuellen Aufgaben.
 
 - Social Preview aus `docs/assets/social-preview.png` über die GitHub-Weboberfläche hochladen.
 - Prüfen, ob Wiki und Projects weiterhin benötigt werden.
-- Entscheiden, ob versionierte Releases für kuratierte GPT-Stände eingeführt werden sollen.
 - Fachliche und rechtliche Prüfung vor produktiver Veröffentlichung einzelner GPT-Artefakte durchführen.
 
 ## Endzustand

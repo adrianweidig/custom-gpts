@@ -1,6 +1,6 @@
 # Release-Prozess
 
-Dieses Repository hat aktuell keine versionierten Releases und keine Paketveröffentlichung. Änderungen werden über Git-Commits und Pull Requests nachvollzogen.
+Dieses Repository hat keine Paketveröffentlichung. Kuratierte Repository-Stände können bei Bedarf als GitHub Release mit sprechendem Snapshot-Tag veröffentlicht werden.
 
 ## Wann ein Release sinnvoll ist
 
@@ -18,7 +18,7 @@ Ein GitHub Release kann sinnvoll sein, wenn:
 3. `git diff --check` ausführen.
 4. Repository-Health-Workflow auf `main` grün prüfen.
 5. Kritische Links, GPT-Ordner und Security-Hinweise manuell prüfen.
-6. Git-Tag mit nachvollziehbarem Namen erstellen, falls eine Versionierung entschieden wurde.
+6. Git-Tag mit nachvollziehbarem Namen erstellen, zum Beispiel `public-readiness-YYYY-MM-DD` für kuratierte Dokumentationsstände.
 7. GitHub Release Notes aus dem Changelog ableiten.
 
 ## Keine automatische Veröffentlichung
