@@ -1,6 +1,12 @@
 # CustomGPTs
 
-Sammlung mehrerer Custom-GPT-Konfigurationen, Prompt-Artefakte und Begleitdokumente. Das Repository ist so aufgebaut, dass die einzelnen GPTs sowohl direkt über ChatGPT genutzt als auch lokal anhand ihrer Prompt- und Wissensdateien nachvollzogen, angepasst und weiterentwickelt werden können.
+Sammlung mehrerer Custom-GPT-Konfigurationen, Prompt-Artefakte und Begleitdokumente. Die einzelnen GPTs können direkt über ChatGPT genutzt oder lokal anhand ihrer Prompt-, Wissens- und Konfigurationsdateien nachvollzogen, angepasst und weiterentwickelt werden.
+
+## Status
+
+Dieses Repository ist ein kuratiertes Dokumentations- und Prompt-Artefakt-Repository. Es ist kein installierbares Softwarepaket und enthält keine zentrale Anwendung mit Build-Prozess. Ein einzelnes Hilfsskript im Ordner `Präsentationscreator/` erzeugt ein lokales, ignoriertes Workshop-Paket.
+
+Produktive Secrets, Tokens, Zugangsdaten, personenbezogene Daten und vertrauliche Kundendaten gehören nicht in dieses Repository.
 
 ## Öffentliche ChatGPT-Links
 
@@ -16,17 +22,10 @@ Sammlung mehrerer Custom-GPT-Konfigurationen, Prompt-Artefakte und Begleitdokume
 
 ## Schnellstart
 
-1. Einen GPT in der Tabelle oben oder über die Projektübersicht unten auswählen.
+1. Einen GPT in der Tabelle oben oder über die Projektübersicht auswählen.
 2. Die jeweilige `README.md` im Unterordner lesen.
-3. Danach `customgpt_infos.md`, `systemprompt.md` und die Fachdateien des Projekts durchgehen.
+3. Danach `customgpt_infos.md`, `systemprompt.md` und die Fachdateien des Projekts prüfen.
 4. Für die direkte Live-Nutzung den passenden ChatGPT-Link öffnen.
-
-## Voraussetzungen
-
-- Für die Live-Nutzung wird ein ChatGPT-Konto benötigt.
-- Für die lokale Prüfung reicht ein Markdown-Editor oder ein Texteditor.
-- Für eigene Anpassungen sollten die jeweiligen `README.md`-, `systemprompt.md`- und Fachdateien gemeinsam betrachtet werden.
-- Secrets, Tokens und Zugangsdaten dürfen nicht in dieses Repository eingetragen werden.
 
 ## Projektübersicht
 
@@ -40,8 +39,7 @@ Projekt für die Erstellung didaktisch aufbereiteter Unterrichtspräsentationen 
 
 ### OpenWebUI Model Builder
 
-Projekt für die Konzeption vollständiger OpenWebUI-Modellpakete inklusive `model.json`, Prompt-Dateien, Wissensbasis und optionaler Begleitdateien.
-Enthält zusätzlich die Sammlung `Problemfälle/` mit offline-orientierten Problemfall-Briefings für typische Aufgabenmodelle.
+Projekt für die Konzeption vollständiger OpenWebUI-Modellpakete inklusive `model.json`, Prompt-Dateien, Wissensbasis und optionaler Begleitdateien. Enthält zusätzlich die Sammlung `Problemfälle/` mit offline-orientierten Problemfall-Briefings für typische Aufgabenmodelle.
 
 ### N8N-Generator
 
@@ -57,7 +55,51 @@ Projekt für sicherheitsbewusste Beratung zu KI-Einführung, Automatisierung, Ag
 
 ### Präsentationscreator
 
-Projekt für browserbasierte, präsentationsfähige Web-Präsentationen mit Storyline, Animationen und moderner Bedienlogik.
+Projekt für browserbasierte, präsentationsfähige Web-Präsentationen mit Storyline, Animationen und moderner Bedienlogik. Der Ordner enthält zusätzlich das Python-Skript `generate_workshop_package.py`, das ein lokales Workshop-Paket nach `Präsentationscreator/workshop-ki-offline/` erzeugt. Dieser Ausgabeordner ist absichtlich ignoriert.
+
+## Voraussetzungen
+
+- ChatGPT-Konto für die direkte Nutzung der öffentlichen GPTs.
+- Markdown-Editor oder Texteditor für lokale Anpassungen.
+- Python 3, falls das Hilfsskript `Präsentationscreator/generate_workshop_package.py` geprüft oder ausgeführt werden soll.
+- Fachliche Prüfung vor produktivem Einsatz, insbesondere bei Unterricht, Sicherheit, Automatisierung, Datenschutz und OpenWebUI-Modellimporten.
+
+## Installation
+
+Für die meisten Inhalte ist keine Installation nötig. Das Repository kann direkt als Markdown- und Asset-Sammlung genutzt werden.
+
+Für das Python-Hilfsskript sind aktuell keine externen Python-Abhängigkeiten dokumentiert; es nutzt Standardbibliotheken.
+
+## Lokale Entwicklung
+
+Empfohlener Arbeitsablauf:
+
+1. Nur den betroffenen GPT-Unterordner ändern.
+2. `README.md`, `customgpt_infos.md`, `systemprompt.md`, `fachwissen.md` und `bootloader.md` gemeinsam auf Konsistenz prüfen.
+3. Dateinamen und technische IDs nur bewusst ändern, weil sie in Prompt- oder Exportartefakten referenziert sein können.
+4. Keine echten Credentials, API-Keys oder Kundendaten in Beispiele übernehmen.
+
+## Build, Tests und Checks
+
+Es gibt keinen zentralen Build- oder Testprozess. Sinnvolle lokale Prüfungen sind:
+
+```powershell
+git status --short --branch
+python -m py_compile "Präsentationscreator\generate_workshop_package.py"
+```
+
+Für Markdown-Dateien sollten zusätzlich interne Links, Tabellen, Überschriften, UTF-8-Umlaute und sichtbare Platzhalter geprüft werden. Wenn ein Workshop-Paket erzeugt wird, muss das Ergebnis im Browser kontrolliert werden.
+
+## Nutzung
+
+Die Inhalte sind pro GPT getrennt:
+
+- `customgpt_infos.md`: Name, Positionierung, Zielgruppe, Einsatzgebiete und Konfigurationshinweise.
+- `systemprompt.md`: Hauptlogik für Rolle, Verhalten, Grenzen und Ausgabequalität.
+- `fachwissen.md`: fachliche Regeln und Strukturwissen.
+- `bootloader.md`: kompakter Hinweistext für GPT-Instructions.
+- `icon.png`: Symbolgrafik, falls im jeweiligen Ordner vorhanden.
+- weitere Spezialdateien wie `fulldoc.md`, `layoutrichtlinien.md` oder `Problemfälle/`.
 
 ## Ordnerstruktur
 
@@ -67,23 +109,26 @@ Projekt für browserbasierte, präsentationsfähige Web-Präsentationen mit Stor
 - `OpenWebUI Model Builder/`: GPT für OpenWebUI-Aufgabenmodelle und Modellpakete.
 - `OpenWebUI Model Builder/Problemfälle/`: kuratierte Briefings für häufige OpenWebUI-Einsatzfälle.
 - `Promptgenerator/`: GPT für robuste Promptvorlagen, öffentlich als `PromptForge`.
-- `Präsentationscreator/`: GPT für hochwertige browserbasierte Präsentationen.
+- `Präsentationscreator/`: GPT für hochwertige browserbasierte Präsentationen und lokales Workshop-Hilfsskript.
 - `Unterrichtsfolien & Handout Builder/`: GPT für Unterrichtsfolien und druckbare Handouts.
 
-## Struktur pro GPT
+## Wichtige Dateien
 
-Die Unterordner enthalten je nach GPT unter anderem:
+- `README.md`: zentrale Einstiegsdokumentation.
+- `AGENTS.md`: projektspezifische Arbeitsregeln für Codex und andere Agenten.
+- `.gitignore`: lokale Artefakte, Caches, Logs und generierte Workshop-Ausgabe.
+- `LICENSE`: Lizenzhinweis für Repository-Inhalte.
 
-- `README.md` mit Zweck, Link und Dateierklärung
-- `systemprompt.md`
-- `bootloader.md`
-- `fachwissen.md`
-- `customgpt_infos.md`
-- `icon.png`
-- weitere spezialisierte Dateien je nach Projekt
+## Hinweise für Codex und andere Agenten
 
-Nicht jeder Ordner enthält exakt alle Dateien. Manche Projekte haben zusätzliche Spezialdateien wie `fulldoc.md`, `layoutrichtlinien.md` oder Problemfall-Sammlungen.
+- Vor Änderungen den Git-Status und die betroffenen Unterordner prüfen.
+- Bestehende Prompt-, Modell- und Dokumentationsartefakte konservativ behandeln.
+- Keine erzeugten Modellartefakte, JSON-Exporte, Icons oder Spezialdokumente löschen, solange ihr Zweck nicht eindeutig geklärt ist.
+- Bei sprachlichen Korrekturen echte UTF-8-Umlaute verwenden, aber technische Slugs und Dateinamen nicht blind eindeutschen.
+- Projektweite Formatierungswellen vermeiden.
 
-## Hinweis
+## Lizenz
 
-Das Repository ist für Prompt-, Doku- und Konfigurationsartefakte gedacht. Produktive Secrets, Tokens oder Zugangsdaten gehören nicht in dieses Repository.
+Dieses Repository steht unter der MIT-Lizenz. Siehe `LICENSE`.
+
+Die Lizenzentscheidung ist eine technische Repository-Empfehlung und keine Rechtsberatung. Bei kommerziell wichtigen GPT-Paketen, Markenfragen, Trainingsdaten, fremden Quellen oder veröffentlichten Assets sollte die Lizenzlage zusätzlich rechtlich geprüft werden.

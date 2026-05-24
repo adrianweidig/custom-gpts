@@ -3,4 +3,14 @@ Thumbs.db
 desktop.ini
 *.tmp
 *.log
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+.env
+.env.*
+!.env.example
 /Präsentationscreator/workshop-ki-offline
