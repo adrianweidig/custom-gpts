@@ -6,6 +6,7 @@ Danke für dein Interesse an diesem Repository. Beiträge sind willkommen, wenn 
 
 - Korrekturen an README-Dateien, Links, Tabellen, Überschriften oder Rechtschreibung
 - fachlich begründete Verbesserungen an `systemprompt.md`, `fachwissen.md`, `bootloader.md` oder `customgpt_infos.md`
+- neue oder verbesserte Beispielartefakte wie `beispiel.md`, `beispiel.py`, `beispiel.html`, `beispiel.json` oder passende Testdateien
 - neue oder verbesserte Problemfall-Briefings für den OpenWebUI Model Builder
 - Hinweise auf unklare Sicherheits-, Datenschutz-, Lizenz- oder Nutzungsgrenzen
 - Verbesserungen an GitHub-Vorlagen, Repository-Hygiene oder Dokumentationsnavigation
@@ -13,7 +14,7 @@ Danke für dein Interesse an diesem Repository. Beiträge sind willkommen, wenn 
 ## Vor der Änderung
 
 1. Lies die zentrale [`README.md`](README.md) und die README des betroffenen GPT-Ordners.
-2. Prüfe, welche Artefakte zusammengehören. Bei einem GPT sind das meist `README.md`, `customgpt_infos.md`, `systemprompt.md`, `fachwissen.md` und `bootloader.md`.
+2. Prüfe, welche Artefakte zusammengehören. Bei einem GPT sind das meist `README.md`, `customgpt_infos.md`, `systemprompt.md`, `fachwissen.md`, `bootloader.md` und vorhandene `beispiel.*` Dateien.
 3. Öffne bei größeren Änderungen zuerst ein Issue, damit Ziel, Umfang und Risiken klar sind.
 
 ## Lokale Prüfung

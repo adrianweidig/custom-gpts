@@ -4,7 +4,14 @@ Alle relevanten Repository-Änderungen sollen hier nachvollziehbar dokumentiert 
 
 ## Unreleased
 
-Noch keine Einträge.
+### Added
+
+- Neue konzipierte GPT-Pakete für Code-Review/Refactoring, Testfall-Design, Recherche-Briefings und Entscheidungsvorlagen.
+- Beispielartefakt-Konvention mit `beispiel.md` oder passenden `beispiel.*` Dateien.
+
+### Changed
+
+- `Custom-GPT-Generator` erzeugt künftig Kernartefakte plus mindestens eine Beispieldatei.
 
 ## public-readiness-2026-05-24
 

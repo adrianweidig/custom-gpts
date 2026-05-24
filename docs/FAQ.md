@@ -10,7 +10,11 @@ Nein. Es ist eine Markdown- und Asset-Sammlung für mehrere Custom-GPT-Konfigura
 
 ## Wie prüfe ich einen GPT lokal?
 
-Starte im jeweiligen Ordner mit `README.md`. Lies danach `customgpt_infos.md`, `systemprompt.md`, `fachwissen.md` und `bootloader.md` gemeinsam, weil diese Dateien zusammen das Verhalten und die Einordnung des GPTs beschreiben.
+Starte im jeweiligen Ordner mit `README.md`. Lies danach `customgpt_infos.md`, `systemprompt.md`, `fachwissen.md`, `bootloader.md` und vorhandene `beispiel.*` Dateien gemeinsam, weil diese Dateien zusammen das Verhalten, die Einordnung und die erwartete Ergebnisqualität des GPTs beschreiben.
+
+## Wofür sind `beispiel.md` oder `beispiel.*` Dateien gedacht?
+
+Sie liefern ein vollständiges Musterergebnis. Bei Beratungs-, Analyse- oder Text-GPTs ist das meist `beispiel.md`. Bei Programmier- oder Dateigenerator-GPTs können es konkrete Artefakte wie `beispiel.py`, `beispiel_test.py`, `beispiel.html` oder `beispiel.json` sein.
 
 ## Warum sind manche Dateinamen oder IDs nicht eingedeutscht?
 
@@ -26,4 +30,4 @@ Es gibt keinen fachlichen Testlauf für GPT-Verhalten. Der Repository-Health-Wor
 
 ## Kann ich neue GPT-Pakete beitragen?
 
-Ja, wenn Zweck, Zielgruppe, Dateien und Sicherheitsgrenzen klar dokumentiert sind. Öffne bei größeren Ergänzungen zuerst ein Issue.
+Ja, wenn Zweck, Zielgruppe, Dateien, Sicherheitsgrenzen und mindestens ein Beispielartefakt klar dokumentiert sind. Öffne bei größeren Ergänzungen zuerst ein Issue.

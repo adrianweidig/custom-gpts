@@ -7,12 +7,16 @@ Dieses Repository enthält Custom-GPT-Konfigurationen, Systemprompts, Wissensdat
 ## Wichtige Verzeichnisse
 
 - `Custom-GPT-Generator/`: Artefakte für `CustomGPT Studio`.
+- `Code-Review Refactoring Coach/`: Code-Review-, Refactoring- und Testbeispiel-GPT.
+- `Entscheidungsvorlagen Builder/`: Entscheidungs- und Management-Memo-GPT.
 - `KI-Integration Sicherheitsberater/`: Sicherheits- und Governance-GPT.
 - `N8N-Generator/`: n8n-Workflow-GPT.
 - `OpenWebUI Model Builder/`: OpenWebUI-Modellpaket-GPT.
 - `OpenWebUI Model Builder/Problemfälle/`: offline-first Problemfall-Briefings.
 - `Promptgenerator/`: Artefakte für `PromptForge`.
 - `Präsentationscreator/`: Web-Präsentations-GPT.
+- `Research Briefing Builder/`: Recherche-, Quellen- und Briefing-GPT.
+- `Testfall-Generator/`: Testfall- und QA-Vorbereitungs-GPT.
 - `Unterrichtsfolien & Handout Builder/`: Unterrichtsfolien- und Handout-GPT.
 
 ## Installation
@@ -43,7 +47,9 @@ Der GitHub-Workflow `Repository Health` prüft zentrale Community-Dateien sowie 
 - Kleine, zielgenaue Änderungen mit minimalem Diff.
 - Deutsche Fließtexte mit echten UTF-8-Umlauten schreiben.
 - Technische Slugs, IDs, Dateinamen, URLs und Modellparameter nicht blind eindeutschen.
-- Prompt-Artefakte eines GPTs gemeinsam betrachten: `README.md`, `customgpt_infos.md`, `systemprompt.md`, `fachwissen.md`, `bootloader.md`.
+- Prompt-Artefakte eines GPTs gemeinsam betrachten: `README.md`, `customgpt_infos.md`, `systemprompt.md`, `fachwissen.md`, `bootloader.md` und vorhandene `beispiel.*` Dateien.
+- Neue oder grundlegend überarbeitete GPT-Pakete sollen mindestens ein Beispielartefakt enthalten: `beispiel.md` für Musterantworten oder passende `beispiel.*` Dateien für konkrete Code-, JSON-, HTML- oder Dokumentartefakte.
+- Beispielartefakte müssen vollständig, realistisch und frei von echten Secrets, Kundendaten oder personenbezogenen Daten sein.
 - Öffentliche Community-Dateien wie `CONTRIBUTING.md`, `SECURITY.md`, `SUPPORT.md`, `CHANGELOG.md`, `.github/ISSUE_TEMPLATE/*` und `.github/PULL_REQUEST_TEMPLATE.md` konsistent halten, wenn sich Repository-Prozesse ändern.
 - Keine großflächigen Umformulierungen, wenn dadurch Prompt-Verhalten oder fachliche Bedeutung unklar verändert würde.
 - Icons und binäre Assets nicht ohne klaren Auftrag verändern.

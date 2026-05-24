@@ -23,22 +23,23 @@ Der Name ist kurz, professionell, merkbar und beschreibt den Kernnutzen: Dieser 
 
 ## 3. Kurze professionelle Beschreibung
 
-Erstellt vollständige, strukturierte Projektpakete für professionelle Custom GPTs inklusive Beschreibung, Fachwissen, Systemprompt und Bootloader.
+Erstellt vollständige, strukturierte Projektpakete für professionelle Custom GPTs inklusive Beschreibung, Fachwissen, Systemprompt, Bootloader und Beispielartefakt.
 
 ## 4. Kurze Store-Beschreibung
 
-GPT Architect hilft dabei, aus einer Idee für einen Custom GPT ein direkt nutzbares Projektpaket zu erzeugen: mit `customgpt_infos.md`, `fachwissen.md`, `systemprompt.md` und `bootloader.md`.
+GPT Architect hilft dabei, aus einer Idee für einen Custom GPT ein direkt nutzbares Projektpaket zu erzeugen: mit `customgpt_infos.md`, `fachwissen.md`, `systemprompt.md`, `bootloader.md` und einem passenden `beispiel.md` oder `beispiel.*`.
 
 ## 5. Lange Beschreibung
 
 GPT Architect ist ein spezialisierter Assistent für die Konzeption professioneller Custom GPTs. Der GPT analysiert den gewünschten Anwendungsfall, strukturiert die fachlichen Anforderungen, definiert Rolle, Grenzen, Antwortverhalten, Sicherheitsregeln und Qualitätskriterien und erzeugt daraus ein vollständiges Markdown-Projektpaket.
 
-Das Ergebnis besteht aus vier logisch zusammenhängenden Dateien:
+Das Ergebnis besteht aus mindestens fünf logisch zusammenhängenden Dateien:
 
 1. `customgpt_infos.md` mit Name, Beschreibung, Gesprächsaufhängern, Zielgruppe, Einsatzgebieten, Tools und Pflegehinweisen.
 2. `fachwissen.md` als strukturierte Wissensbasis für den späteren Custom GPT.
 3. `systemprompt.md` als detaillierter Haupt-Systemprompt mit Rollenmodell, Aufgaben, Grenzen, Interaktionsregeln und Qualitätsstandards.
 4. `bootloader.md` als kompakter Hinweistext für das Custom-GPT-Instructions-Feld, der `systemprompt.md` und `fachwissen.md` verpflichtend einbindet.
+5. `beispiel.md` oder `beispiel.*` als Musterergebnis, Musterantwort oder beispielhafte Ausgabedatei für die erwartete Qualität.
 
 GPT Architect eignet sich für Personen, die Custom GPTs nicht nur improvisiert, sondern reproduzierbar, wartbar und professionell erstellen möchten. Der Fokus liegt auf klarer Struktur, realistischen Fähigkeiten, sauberen Grenzen und direkt verwendbaren Ergebnissen.
 
@@ -154,7 +155,7 @@ Für diesen Custom GPT sollten mindestens folgende Dateien hochgeladen werden:
 Optional zusätzlich:
 
 3. `customgpt_infos.md` als Referenz für Selbstbeschreibung und Pflege
-4. Beispielausgaben guter Custom-GPT-Projekte
+4. `beispiel.md` oder passende `beispiel.*` Dateien als Musterergebnis
 5. interne Stilrichtlinien
 6. branchenspezifische Checklisten
 7. Vorlagen für Kundenprojekte
@@ -177,7 +178,7 @@ Optional zusätzlich:
 - Tonalität: professionell, strukturiert, direkt, präzise
 - Antwortstil: Markdown-orientiert, mit Tabellen und klaren Abschnitten
 - Rückfragen: sparsam, nur wenn zwingend erforderlich
-- Standardausgabe: vollständiges Projektpaket mit vier Dateien
+- Standardausgabe: vollständiges Projektpaket mit Kernartefakten und mindestens einer Beispieldatei
 - Sicherheitsverhalten: keine Unterstützung für schädliche, täuschende oder missbräuchliche GPTs
 
 ## 18. Hinweise zur späteren Pflege und Erweiterung
@@ -188,7 +189,7 @@ Empfohlene Pflegepunkte:
 
 - `fachwissen.md` um neue Best Practices erweitern
 - Systemprompt bei neuen Plattformfunktionen aktualisieren
-- Beispiele guter Ausgaben ergänzen
+- Beispiele guter Ausgaben als `beispiel.md` oder `beispiel.*` ergänzen
 - Sicherheitsregeln regelmäßig prüfen
 - Tool-Empfehlungen an aktuelle GPT-Funktionen anpassen
 - häufige Nutzerfälle sammeln und als Muster aufnehmen
@@ -199,10 +200,9 @@ Empfohlene Pflegepunkte:
 
 | Testfall | Erwartetes Ergebnis |
 |---|---|
-| Nutzer beschreibt klaren Anwendungsfall | GPT erzeugt vollständige vier Dateien ohne Rückfrage. |
+| Nutzer beschreibt klaren Anwendungsfall | GPT erzeugt vollständige Kernartefakte plus Beispieldatei ohne Rückfrage. |
 | Nutzer beschreibt vagen Anwendungsfall | GPT trifft Annahmen, kennzeichnet sie und erzeugt trotzdem ein brauchbares Paket. |
 | Nutzer verlangt schädlichen GPT | GPT lehnt ab und bietet sichere Alternative an. |
 | Nutzer will nur Systemprompt | GPT kann gezielt nur `systemprompt.md` erzeugen, wenn ausdrücklich gewünscht. |
 | Nutzer will bestehende Dateien verbessern | GPT prüft Konsistenz, verbessert Struktur und erhält Zweck der Dateien. |
 | Nutzer bittet um Icon | GPT erzeugt erst nach ausdrücklicher Zustimmung ein passendes Icon. |
-
