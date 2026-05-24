@@ -2,7 +2,7 @@
 
 > **Maintenance-Status seit 24. Mai 2026:** Dieses Repository ist als öffentliche Referenz- und Vorlagensammlung abgeschlossen. Es findet keine aktive Weiterentwicklung mehr statt. Inhalte bleiben nutzbar, Issues und Pull Requests werden nicht verbindlich bearbeitet.
 
-![CustomGPTs repository overview](docs/assets/repository-hero.svg)
+![CustomGPTs repository overview](docs/assets/repository-hero.png)
 
 [![Repository Health](https://github.com/adrianweidig/custom-gpts/actions/workflows/repository-health.yml/badge.svg)](https://github.com/adrianweidig/custom-gpts/actions/workflows/repository-health.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
