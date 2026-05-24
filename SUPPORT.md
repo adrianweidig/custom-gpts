@@ -1,6 +1,6 @@
 # Support
 
-Dieses Repository wird als öffentliche Sammlung von Custom-GPT-Artefakten gepflegt.
+Dieses Repository wird seit dem 24. Mai 2026 nicht mehr aktiv weiterentwickelt. Die Inhalte bleiben als öffentliche Sammlung von Custom-GPT-Artefakten nutzbar, es gibt aber keinen verbindlichen Support und keine zugesagte Reaktionszeit.
 
 ## Geeignete Support-Anfragen
 
@@ -13,6 +13,8 @@ Dieses Repository wird als öffentliche Sammlung von Custom-GPT-Artefakten gepfl
 ## GitHub Issues
 
 Nutze [GitHub Issues](https://github.com/adrianweidig/custom-gpts/issues), wenn deine Anfrage öffentlich diskutiert werden kann.
+
+Issues dienen primär der Dokumentation von Hinweisen für spätere Leserinnen und Leser. Eine Bearbeitung, Priorisierung oder Umsetzung ist nicht verbindlich zugesagt.
 
 Bitte gib an:
 

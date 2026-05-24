@@ -1,6 +1,6 @@
 # Mitwirken
 
-Danke für dein Interesse an diesem Repository. Beiträge sind willkommen, wenn sie die vorhandenen GPT-Artefakte präziser, konsistenter oder besser nachvollziehbar machen.
+Danke für dein Interesse an diesem Repository. Seit dem 24. Mai 2026 wird dieses Repository nicht mehr aktiv weiterentwickelt. Beiträge können weiterhin helfen, die vorhandenen GPT-Artefakte präziser, konsistenter oder besser nachvollziehbar zu machen, es gibt aber keine verbindliche Zusage für Review, Merge oder Support.
 
 ## Geeignete Beiträge
 
@@ -15,7 +15,7 @@ Danke für dein Interesse an diesem Repository. Beiträge sind willkommen, wenn 
 
 1. Lies die zentrale [`README.md`](README.md) und die README des betroffenen GPT-Ordners.
 2. Prüfe, welche Artefakte zusammengehören. Bei einem GPT sind das meist `README.md`, `customgpt_infos.md`, `systemprompt.md`, `fachwissen.md`, `bootloader.md` und vorhandene `beispiel.*` Dateien.
-3. Öffne bei größeren Änderungen zuerst ein Issue, damit Ziel, Umfang und Risiken klar sind.
+3. Öffne bei größeren Änderungen zuerst ein Issue, damit Ziel, Umfang und Risiken klar sind. Beachte dabei, dass Issues nicht verbindlich bearbeitet werden.
 
 ## Lokale Prüfung
 
@@ -43,6 +43,8 @@ Prüfe zusätzlich manuell:
 3. Beschreibe fachliche Auswirkungen, falls Prompt-Verhalten verändert wird.
 4. Liste ausgeführte Prüfungen.
 5. Verlinke zugehörige Issues, wenn vorhanden.
+
+Pull Requests werden best-effort geprüft. Für aktive Weiterentwicklung oder eigene Varianten ist ein Fork der verlässlichere Weg.
 
 ## Stilregeln
 

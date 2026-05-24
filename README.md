@@ -1,5 +1,7 @@
 # CustomGPTs
 
+> **Maintenance-Status seit 24. Mai 2026:** Dieses Repository ist als öffentliche Referenz- und Vorlagensammlung abgeschlossen. Es findet keine aktive Weiterentwicklung mehr statt. Inhalte bleiben nutzbar, Issues und Pull Requests werden nicht verbindlich bearbeitet.
+
 ![CustomGPTs repository overview](docs/assets/repository-hero.svg)
 
 [![Repository Health](https://github.com/adrianweidig/custom-gpts/actions/workflows/repository-health.yml/badge.svg)](https://github.com/adrianweidig/custom-gpts/actions/workflows/repository-health.yml)
@@ -146,9 +148,9 @@ Der GitHub-Workflow [`Repository Health`](.github/workflows/repository-health.ym
 
 ## Mitwirken
 
-Beiträge sind willkommen, wenn sie den fachlichen Kern der GPT-Artefakte respektieren und bestehende Informationen nicht unbemerkt verändern.
+Dieses Repository wird seit dem 24. Mai 2026 nicht mehr aktiv weiterentwickelt. Beiträge können weiterhin als Hinweise, Forks oder Pull Requests eingereicht werden, es gibt aber keine verbindliche Zusage für Review, Merge oder Support.
 
-Geeignete Beiträge sind zum Beispiel:
+Geeignete Hinweise oder Beiträge sind zum Beispiel:
 
 - Korrekturen an Dokumentation, Links, Tabellen oder Begriffen
 - Verbesserungen an Prompt-Konsistenz und Struktur
@@ -166,4 +168,4 @@ Die Lizenzentscheidung ist keine Rechtsberatung. Bei kommerziell wichtigen GPT-P
 
 ## Status
 
-Das Repository ist öffentlich, GitHub-synchron und als kuratierte Artefaktsammlung nutzbar. Der aktuelle technische Readiness-Stand ist in [`CODEX_PROJECT_READINESS.md`](CODEX_PROJECT_READINESS.md) dokumentiert.
+Das Repository ist öffentlich, GitHub-synchron und als kuratierte Artefaktsammlung nutzbar. Seit dem 24. Mai 2026 gilt es als Referenzstand ohne aktive Weiterentwicklung. Der aktuelle technische Readiness-Stand ist in [`CODEX_PROJECT_READINESS.md`](CODEX_PROJECT_READINESS.md) dokumentiert.
