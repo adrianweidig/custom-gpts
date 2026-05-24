@@ -12,6 +12,7 @@ Alle relevanten Repository-Änderungen sollen hier nachvollziehbar dokumentiert 
 ### Changed
 
 - `Custom-GPT-Generator` erzeugt künftig Kernartefakte plus mindestens eine Beispieldatei.
+- Maintenance-Status ab 24. Mai 2026 in README, Contribution-Hinweisen und Support-Dokumentation dokumentiert.
 
 ## public-readiness-2026-05-24
 
