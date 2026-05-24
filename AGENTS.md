@@ -62,6 +62,10 @@ Der GitHub-Workflow `Repository Health` prüft zentrale Community-Dateien sowie 
 - Platzhalter müssen offensichtlich sein, zum Beispiel `YOUR_API_KEY`.
 - Keine personenbezogenen Daten, Kundendaten oder vertraulichen Architekturdetails ergänzen.
 - Sicherheits-, Datenschutz- und Rechtsaussagen als prüfpflichtig behandeln, wenn sie produktive Nutzung betreffen.
+- Bei Security- oder Readiness-Arbeiten GitHub-Alerts über Code Scanning, Dependabot und Secret Scanning prüfen, soweit API-Zugriff vorhanden ist.
+- Für lokale Secret-Prüfungen mindestens eine gezielte Muster- oder Scanner-Prüfung durchführen; gefundene Werte nie vollständig ausgeben.
+- GitHub-Actions-Workflows mit minimalen `permissions`, begrenzter Laufzeit und ohne unnötig persistierte Credentials konfigurieren.
+- CodeQL oder andere Code-Scanner nur ergänzen, wenn das Repository tatsächlich auswertbare Anwendungssprache oder Build-Artefakte enthält.
 
 ## Regeln für Datei-Löschungen
 
