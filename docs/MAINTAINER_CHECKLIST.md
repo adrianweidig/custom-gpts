@@ -6,7 +6,7 @@ Diese Punkte erfordern Repository-Rechte oder bewusste Maintainer-Entscheidungen
 
 - Repository Description ist gesetzt: `Curated Custom GPT configurations, system prompts, knowledge files and documentation.`
 - Topics sind gesetzt: `custom-gpt`, `prompt-engineering`, `chatgpt`, `openwebui`, `n8n`, `documentation`.
-- Social Preview als PNG aus [`docs/assets/repository-hero.svg`](assets/repository-hero.svg) exportieren und hochladen.
+- Social Preview aus [`docs/assets/social-preview.png`](assets/social-preview.png) hochladen.
 - Prüfen, ob Wiki und Projects für dieses Repository wirklich benötigt werden.
 - Discussions aktivieren, wenn öffentliche Kollaboration über Fragen und Ideen gewünscht ist.
 
