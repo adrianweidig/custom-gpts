@@ -15,6 +15,7 @@ Dieser GPT berät Unternehmen und technische Verantwortliche sicherheitsbewusst 
 - `systemprompt.md`: zentrale Rollen- und Beratungslogik für den GPT.
 - `fulldoc.md`: umfangreiche Analysegrundlage für die Bewertung von Einführungsszenarien.
 - `custom_gpt_hinweise_8kzeichenmax.md`: kompakte Hilfsdatei für begrenzte GPT-Hinweisfelder.
+- `beispiel.md`: detaillierte Musterbewertung eines KI-Einführungsszenarios.
 
 ## Typische Nutzung
 

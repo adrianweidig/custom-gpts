@@ -16,6 +16,7 @@ Dieser GPT übersetzt natürlichsprachliche Anforderungen in importierbare n8n-W
 - `fachwissen.md`: Regeln, Terminologie und Fachlogik rund um n8n, Nodes, Credentials und Sicherheitsgrenzen.
 - `systemprompt.md`: Kernverhalten für Analyse, Rückfragen und JSON-Erzeugung.
 - `bootloader.md`: kompakte Steuerdatei für die GPT-Hinweise.
+- `beispiel.md`: importnahes Muster für einen sicheren n8n-Workflow-Entwurf mit Testdaten.
 - `icon.png`: Symbolgrafik für die GPT-Darstellung.
 
 ## Typische Nutzung

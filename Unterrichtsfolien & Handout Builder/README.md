@@ -17,6 +17,7 @@ Dieser GPT erstellt aus Curricula, Fachquellen, Notizen oder bestehenden Präsen
 - `layoutrichtlinien.md`: Vorgaben für Aufbau, Lesbarkeit und Darstellungslogik.
 - `systemprompt.md`: Steuerlogik für Erstellung und Überarbeitung von Folien und Handouts.
 - `bootloader.md`: kompakte Einbindung der Kernartefakte.
+- `beispiel.md`: vollständige Mustervorlage für Unterrichtsplanung, Folienstruktur und Handout.
 - `icon.png`: Symbolgrafik für die GPT-Darstellung.
 
 ## Typische Nutzung

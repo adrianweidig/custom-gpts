@@ -20,6 +20,7 @@ Dieser GPT erzeugt aus kurzen oder ausführlichen Zielbeschreibungen direkt nutz
 - `fachwissen.md`: Prinzipien für robuste Promptstruktur, Qualität und sichere Ausgaben.
 - `systemprompt.md`: Kernregeln für Prompt-Erstellung, Rückfragen und Ausgabeform.
 - `bootloader.md`: kompakte Steuerdatei für die GPT-Hinweise.
+- `beispiel.md`: detaillierte Muster-Promptvorlage mit Beispiel-Eingabe und Beispiel-Ausgabe.
 - `icon.png`: Symbolgrafik für die GPT-Darstellung.
 
 ## Typische Nutzung
