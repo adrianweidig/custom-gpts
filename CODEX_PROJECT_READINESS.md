@@ -19,6 +19,7 @@ Wichtige Inhalte:
 - zentrale Projektdokumentation in `README.md`
 - projektspezifische Codex-Regeln in `AGENTS.md`
 - GPT-Unterordner mit `README.md`, `customgpt_infos.md`, `systemprompt.md`, `fachwissen.md`, `bootloader.md` und teils Assets
+- neue GPT-Unterordner können zusätzlich `beispiel.md` oder passende `beispiel.*` Dateien als Musterartefakte enthalten
 - Problemfall-Briefings unter `OpenWebUI Model Builder/Problemfälle/`
 
 ## Git-Status

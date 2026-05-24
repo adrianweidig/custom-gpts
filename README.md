@@ -39,6 +39,7 @@ Dieses Projekt ist kein installierbares Softwarepaket und keine zentrale Anwendu
 | GPT-Metadaten | Positionierung, Zielgruppen, Gesprächsaufhänger und Einsatzgebiete |
 | Icons | Symbolgrafiken für einzelne GPTs, sofern vorhanden |
 | Problemfälle | Offline-orientierte Briefings für typische OpenWebUI-Modellaufgaben |
+| Beispielartefakte | Musterantworten oder fertige Beispiel-Dateien wie `beispiel.md`, `beispiel.py` oder `beispiel_test.py` |
 
 ## Öffentliche ChatGPT-Links
 
@@ -52,17 +53,32 @@ Dieses Projekt ist kein installierbares Softwarepaket und keine zentrale Anwendu
 | KI-Integration Sicherheitsberater | https://chatgpt.com/g/g-6a06d83ba4808191bffb12f7aa4b043b-ki-integration-sicherheitsberater | [`KI-Integration Sicherheitsberater`](KI-Integration%20Sicherheitsberater/README.md) |
 | Präsentationscreator | https://chatgpt.com/g/g-69fdf8ef05c08191bb3a5454c597baa7-prasentationscreator | [`Präsentationscreator`](Präsentationscreator/README.md) |
 
+## Weitere konzipierte GPT-Pakete
+
+Diese Pakete sind lokal vollständig vorbereitet, haben aber noch keinen öffentlichen ChatGPT-Link.
+
+| GPT-Paket | Schwerpunkt | Lokaler Ordner |
+|---|---|---|
+| Code Review Coach | Code-Review, Refactoring, Security- und Testlückenanalyse | [`Code-Review Refactoring Coach`](Code-Review%20Refactoring%20Coach/README.md) |
+| TestCase Studio | Testfallableitung aus Anforderungen, User Stories und Bugreports | [`Testfall-Generator`](Testfall-Generator/README.md) |
+| Research Briefing Builder | Recherche-Briefings, Quellenvergleich und Unsicherheitsmarkierung | [`Research Briefing Builder`](Research%20Briefing%20Builder/README.md) |
+| Decision Memo Builder | Entscheidungsvorlagen, Optionenvergleiche und Management-Memos | [`Entscheidungsvorlagen Builder`](Entscheidungsvorlagen%20Builder/README.md) |
+
 ## Repository-Struktur
 
 | Pfad | Inhalt |
 |---|---|
+| [`Code-Review Refactoring Coach/`](Code-Review%20Refactoring%20Coach/README.md) | GPT-Paket für Code-Review, Refactoring und Tests inklusive Beispielcode |
 | [`Custom-GPT-Generator/`](Custom-GPT-Generator/README.md) | Artefakte für `CustomGPT Studio`, einen GPT zum Entwurf vollständiger Custom-GPT-Pakete |
+| [`Entscheidungsvorlagen Builder/`](Entscheidungsvorlagen%20Builder/README.md) | GPT-Paket für Entscheidungsvorlagen, Optionenvergleiche und Management-Memos |
 | [`KI-Integration Sicherheitsberater/`](KI-Integration%20Sicherheitsberater/README.md) | Sicherheits- und Governance-GPT für KI-Einführung, Automatisierung und Betriebsmodelle |
 | [`N8N-Generator/`](N8N-Generator/README.md) | GPT für importierbare n8n-Workflow-JSONs mit Sicherheitsannahmen und Testhinweisen |
 | [`OpenWebUI Model Builder/`](OpenWebUI%20Model%20Builder/README.md) | GPT für OpenWebUI-Aufgabenmodelle, Modellpakete und Wissensdateien |
 | [`OpenWebUI Model Builder/Problemfälle/`](OpenWebUI%20Model%20Builder/Problemf%C3%A4lle/README.md) | Kuratierte Briefings für häufige OpenWebUI-Einsatzfälle |
 | [`Promptgenerator/`](Promptgenerator/README.md) | Artefakte für `PromptForge`, einen GPT für robuste Promptvorlagen |
 | [`Präsentationscreator/`](Präsentationscreator/README.md) | GPT für browserbasierte, präsentationsfähige Web-Präsentationen |
+| [`Research Briefing Builder/`](Research%20Briefing%20Builder/README.md) | GPT-Paket für Recherche-Briefings und Quellenbewertung |
+| [`Testfall-Generator/`](Testfall-Generator/README.md) | GPT-Paket für Testfall-Design und QA-Vorbereitung |
 | [`Unterrichtsfolien & Handout Builder/`](Unterrichtsfolien%20%26%20Handout%20Builder/README.md) | GPT für Unterrichtsfolien und druckbare Handouts |
 
 ## Lokale Nutzung
@@ -72,7 +88,7 @@ Für die meisten Inhalte ist keine Installation nötig.
 1. Repository klonen oder lokal öffnen.
 2. Einen GPT-Ordner aus der Übersicht auswählen.
 3. Zuerst die jeweilige `README.md` lesen.
-4. Danach `customgpt_infos.md`, `systemprompt.md`, `fachwissen.md` und `bootloader.md` gemeinsam prüfen.
+4. Danach `customgpt_infos.md`, `systemprompt.md`, `fachwissen.md`, `bootloader.md` und vorhandene `beispiel.*` Dateien gemeinsam prüfen.
 5. Für die direkte Live-Nutzung den passenden ChatGPT-Link aus der Tabelle öffnen.
 
 Die einzelnen Artefakte haben unterschiedliche Rollen:
@@ -83,6 +99,7 @@ Die einzelnen Artefakte haben unterschiedliche Rollen:
 | `systemprompt.md` | Hauptlogik für Rolle, Verhalten, Grenzen und Ausgabequalität |
 | `fachwissen.md` | Fachliche Regeln und Strukturwissen |
 | `bootloader.md` | Kompakter Hinweistext für GPT-Instructions |
+| `beispiel.md` oder `beispiel.*` | Musterantwort, Musterdatei oder mehrere Beispielartefakte für die erwartete Ausgabequalität |
 | `icon.png` | Symbolgrafik, falls im jeweiligen Ordner vorhanden |
 
 ## Qualitätsgrenzen
@@ -101,8 +118,9 @@ Empfohlener Arbeitsablauf:
 1. Vor Änderungen `git status --short --branch` prüfen.
 2. Nur den betroffenen GPT-Unterordner ändern.
 3. Zusammengehörige Dateien eines GPTs gemeinsam betrachten.
-4. Keine echten Credentials, API-Keys oder Kundendaten in Beispiele übernehmen.
-5. Lokale Links, Tabellen, Überschriften und UTF-8-Umlaute prüfen.
+4. Beispielartefakte als Qualitätsanker pflegen: `beispiel.md` für Musterantworten, `beispiel.*` für konkrete Code- oder Dateiergebnisse.
+5. Keine echten Credentials, API-Keys oder Kundendaten in Beispiele übernehmen.
+6. Lokale Links, Tabellen, Überschriften und UTF-8-Umlaute prüfen.
 
 ## Qualitätschecks
 

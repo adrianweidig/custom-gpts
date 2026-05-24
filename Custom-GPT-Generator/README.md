@@ -8,7 +8,7 @@ https://chatgpt.com/g/g-6a06ef9be6fc819197d7b815debd0f57-customgpt-studio
 
 ## Zweck
 
-Dieser GPT erstellt vollständige, strukturierte Projektpakete für professionelle Custom GPTs. Ziel ist kein loser Einzelprompt, sondern ein reproduzierbares Set aus Beschreibung, Wissensbasis, Systemprompt und Bootloader.
+Dieser GPT erstellt vollständige, strukturierte Projektpakete für professionelle Custom GPTs. Ziel ist kein loser Einzelprompt, sondern ein reproduzierbares Set aus Beschreibung, Wissensbasis, Systemprompt, Bootloader und Beispielartefakt.
 
 ## Enthaltene Dateien
 
@@ -16,6 +16,7 @@ Dieser GPT erstellt vollständige, strukturierte Projektpakete für professionel
 - `fachwissen.md`: inhaltliche Grundlage und fachliche Leitlinien für die spätere GPT-Konfiguration.
 - `systemprompt.md`: Hauptlogik für Rolle, Verhalten, Grenzen und Ausgabequalität.
 - `bootloader.md`: kompakter Hinweistext für das Instructions-Feld, der auf die Kernartefakte verweist.
+- `beispiel.md` oder `beispiel.*`: Musterantwort, Musterdatei oder mehrere Beispielartefakte für erwartete Ergebnisqualität.
 - `icon.png`: Symbolgrafik für die GPT-Darstellung.
 
 ## Typische Nutzung
