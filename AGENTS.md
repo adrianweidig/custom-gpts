@@ -12,25 +12,21 @@ Dieses Repository enthält Custom-GPT-Konfigurationen, Systemprompts, Wissensdat
 - `OpenWebUI Model Builder/`: OpenWebUI-Modellpaket-GPT.
 - `OpenWebUI Model Builder/Problemfälle/`: offline-first Problemfall-Briefings.
 - `Promptgenerator/`: Artefakte für `PromptForge`.
-- `Präsentationscreator/`: Web-Präsentations-GPT und `generate_workshop_package.py`.
+- `Präsentationscreator/`: Web-Präsentations-GPT.
 - `Unterrichtsfolien & Handout Builder/`: Unterrichtsfolien- und Handout-GPT.
 
 ## Installation
 
 Es gibt keinen zentralen Installationsschritt. Die meisten Dateien sind Markdown- und Asset-Artefakte.
 
-Für `Präsentationscreator/generate_workshop_package.py` wird Python 3 benötigt. Das Skript nutzt aktuell nur Standardbibliotheken.
-
 ## Entwicklungsbefehle
 
-Es gibt keinen Dev-Server und keinen zentralen Build. Übliche Prüfungen:
+Es gibt keinen Dev-Server und keinen zentralen Build. Nützliche Prüfungen:
 
 ```powershell
 git status --short --branch
-python -m py_compile "Präsentationscreator\generate_workshop_package.py"
+git diff --check
 ```
-
-Wenn das Workshop-Paket erzeugt wird, landet es in `Präsentationscreator/workshop-ki-offline/`. Dieser Ausgabeordner ist generiert und ignoriert.
 
 ## Tests, Build, Linting und Formatierung
 
@@ -38,7 +34,6 @@ Wenn das Workshop-Paket erzeugt wird, landet es in `Präsentationscreator/worksh
 - Kein Paketmanager, Lockfile oder CI-Workflow vorhanden.
 - Kein automatisches globales Formatting ausführen.
 - Markdown-Änderungen manuell auf Überschriften, Tabellen, Links, UTF-8-Umlaute und fachliche Konsistenz prüfen.
-- Python-Änderungen mindestens mit `python -m py_compile` prüfen.
 
 ## Coding- und Dokumentationskonventionen
 
@@ -92,7 +87,6 @@ Vor dem Abschluss ausführen oder begründet auslassen:
 ```powershell
 git diff --check
 git status --short --branch
-python -m py_compile "Präsentationscreator\generate_workshop_package.py"
 ```
 
 Zusätzlich README, `AGENTS.md`, Lizenzhinweis und `.gitignore` auf Konsistenz prüfen, wenn diese Dateien geändert wurden.

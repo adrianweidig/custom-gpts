@@ -13,4 +13,3 @@ venv/
 .env
 .env.*
 !.env.example
-/Präsentationscreator/workshop-ki-offline

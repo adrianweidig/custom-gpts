@@ -4,7 +4,7 @@ Sammlung mehrerer Custom-GPT-Konfigurationen, Prompt-Artefakte und Begleitdokume
 
 ## Status
 
-Dieses Repository ist ein kuratiertes Dokumentations- und Prompt-Artefakt-Repository. Es ist kein installierbares Softwarepaket und enthält keine zentrale Anwendung mit Build-Prozess. Ein einzelnes Hilfsskript im Ordner `Präsentationscreator/` erzeugt ein lokales, ignoriertes Workshop-Paket.
+Dieses Repository ist ein kuratiertes Dokumentations- und Prompt-Artefakt-Repository. Es ist kein installierbares Softwarepaket und enthält keine zentrale Anwendung mit Build-Prozess.
 
 Produktive Secrets, Tokens, Zugangsdaten, personenbezogene Daten und vertrauliche Kundendaten gehören nicht in dieses Repository.
 
@@ -55,20 +55,17 @@ Projekt für sicherheitsbewusste Beratung zu KI-Einführung, Automatisierung, Ag
 
 ### Präsentationscreator
 
-Projekt für browserbasierte, präsentationsfähige Web-Präsentationen mit Storyline, Animationen und moderner Bedienlogik. Der Ordner enthält zusätzlich das Python-Skript `generate_workshop_package.py`, das ein lokales Workshop-Paket nach `Präsentationscreator/workshop-ki-offline/` erzeugt. Dieser Ausgabeordner ist absichtlich ignoriert.
+Projekt für browserbasierte, präsentationsfähige Web-Präsentationen mit Storyline, Animationen und moderner Bedienlogik.
 
 ## Voraussetzungen
 
 - ChatGPT-Konto für die direkte Nutzung der öffentlichen GPTs.
 - Markdown-Editor oder Texteditor für lokale Anpassungen.
-- Python 3, falls das Hilfsskript `Präsentationscreator/generate_workshop_package.py` geprüft oder ausgeführt werden soll.
 - Fachliche Prüfung vor produktivem Einsatz, insbesondere bei Unterricht, Sicherheit, Automatisierung, Datenschutz und OpenWebUI-Modellimporten.
 
 ## Installation
 
 Für die meisten Inhalte ist keine Installation nötig. Das Repository kann direkt als Markdown- und Asset-Sammlung genutzt werden.
-
-Für das Python-Hilfsskript sind aktuell keine externen Python-Abhängigkeiten dokumentiert; es nutzt Standardbibliotheken.
 
 ## Lokale Entwicklung
 
@@ -85,10 +82,10 @@ Es gibt keinen zentralen Build- oder Testprozess. Sinnvolle lokale Prüfungen si
 
 ```powershell
 git status --short --branch
-python -m py_compile "Präsentationscreator\generate_workshop_package.py"
+git diff --check
 ```
 
-Für Markdown-Dateien sollten zusätzlich interne Links, Tabellen, Überschriften, UTF-8-Umlaute und sichtbare Platzhalter geprüft werden. Wenn ein Workshop-Paket erzeugt wird, muss das Ergebnis im Browser kontrolliert werden.
+Für Markdown-Dateien sollten zusätzlich interne Links, Tabellen, Überschriften, UTF-8-Umlaute und sichtbare Platzhalter geprüft werden.
 
 ## Nutzung
 
@@ -109,14 +106,14 @@ Die Inhalte sind pro GPT getrennt:
 - `OpenWebUI Model Builder/`: GPT für OpenWebUI-Aufgabenmodelle und Modellpakete.
 - `OpenWebUI Model Builder/Problemfälle/`: kuratierte Briefings für häufige OpenWebUI-Einsatzfälle.
 - `Promptgenerator/`: GPT für robuste Promptvorlagen, öffentlich als `PromptForge`.
-- `Präsentationscreator/`: GPT für hochwertige browserbasierte Präsentationen und lokales Workshop-Hilfsskript.
+- `Präsentationscreator/`: GPT für hochwertige browserbasierte Präsentationen.
 - `Unterrichtsfolien & Handout Builder/`: GPT für Unterrichtsfolien und druckbare Handouts.
 
 ## Wichtige Dateien
 
 - `README.md`: zentrale Einstiegsdokumentation.
 - `AGENTS.md`: projektspezifische Arbeitsregeln für Codex und andere Agenten.
-- `.gitignore`: lokale Artefakte, Caches, Logs und generierte Workshop-Ausgabe.
+- `.gitignore`: lokale Artefakte, Caches, Logs und temporäre Dateien.
 - `LICENSE`: Lizenzhinweis für Repository-Inhalte.
 
 ## Hinweise für Codex und andere Agenten
