@@ -1,29 +1,38 @@
 # Maintainer-Checkliste
 
-Diese Punkte erfordern Repository-Rechte oder bewusste Maintainer-Entscheidungen und wurden nicht automatisch geändert.
+Diese Datei dokumentiert erledigte Repository-Einstellungen und verbleibende Schritte, die GitHub-Rechte, UI-Zugriff oder bewusste Maintainer-Entscheidungen erfordern.
+
+## Erledigt am 2026-05-24
+
+- Repository Description gesetzt: `Curated Custom GPT configurations, system prompts, knowledge files and documentation.`
+- Topics gesetzt: `custom-gpt`, `prompt-engineering`, `chatgpt`, `openwebui`, `n8n`, `documentation`.
+- Discussions aktiviert.
+- Security Policy veröffentlicht.
+- Private Vulnerability Reporting aktiviert.
+- Vulnerability Alerts aktiviert.
+- Dependabot Security Updates aktiviert.
+- Secret Scanning und Push Protection aktiviert.
+- Branch Protection für `main` eingerichtet:
+  - Required Status Check: `Documentation and link health`
+  - aktueller Branch muss vor Merge aktuell sein
+  - ein approving Review für Pull Requests erforderlich
+  - stale Reviews werden bei neuen Commits verworfen
+  - Conversation Resolution erforderlich
+  - Force Pushes und Branch-Löschung deaktiviert
+- Social-Preview-PNG erstellt: [`docs/assets/social-preview.png`](assets/social-preview.png)
 
 ## GitHub Repository Settings
 
-- Repository Description ist gesetzt: `Curated Custom GPT configurations, system prompts, knowledge files and documentation.`
-- Topics sind gesetzt: `custom-gpt`, `prompt-engineering`, `chatgpt`, `openwebui`, `n8n`, `documentation`.
-- Social Preview aus [`docs/assets/social-preview.png`](assets/social-preview.png) hochladen.
-- Prüfen, ob Wiki und Projects für dieses Repository wirklich benötigt werden.
-- Discussions aktivieren, wenn öffentliche Kollaboration über Fragen und Ideen gewünscht ist.
+- Social Preview aus [`docs/assets/social-preview.png`](assets/social-preview.png) in GitHub hochladen. GitHub dokumentiert dafür den Upload über `Settings` -> `Social preview`; ein direkter REST-/GitHub-CLI-Upload wurde nicht verfügbar gemacht.
+- Prüfen, ob Wiki und Projects weiterhin benötigt werden. Beide Funktionen waren bereits aktiviert und wurden nicht deaktiviert, um keine bestehenden externen Arbeitsflächen zu beeinflussen.
 
 ## Security
 
-- Private Vulnerability Reporting aktivieren.
-- Secret Scanning und Push Protection aktivieren, sofern im GitHub-Plan verfügbar.
-- Dependabot Alerts und Dependabot Security Updates aktivieren.
 - Code Scanning nur aktivieren, wenn künftig auswertbarer Anwendungscode hinzukommt. Für die aktuelle Markdown-/Asset-Sammlung ist kein CodeQL-Workflow eingerichtet.
-- Security Policy nach Aktivierung des privaten Meldewegs erneut prüfen.
 
 ## Branch Protection
 
-- Branch Protection oder Ruleset für `main` einrichten.
-- Pull Requests vor Merge verlangen.
-- Status Check `Repository Health` als required markieren, sobald der Workflow stabil grün läuft.
-- Force Pushes auf `main` verbieten.
+- Branch Protection ist eingerichtet. Bei künftigen Workflow-Umbenennungen muss der Required Status Check entsprechend angepasst werden.
 
 ## Releases
 

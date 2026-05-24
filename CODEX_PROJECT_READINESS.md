@@ -95,9 +95,10 @@ Keine Korrektur erforderlich.
 - Community-Dateien für Contribution, Security, Support, Code of Conduct und Changelog ergänzt.
 - `.github`-Vorlagen, Dependabot-Konfiguration und Repository-Health-Workflow ergänzt.
 - `docs/` mit FAQ, Release-Prozess, Maintainer-Checkliste und Hero-SVG ergänzt.
+- Social-Preview-PNG ergänzt.
 - `.editorconfig` und `.gitattributes` ergänzt.
 - `AGENTS.md` an den neuen Repository-Health-Workflow angepasst.
-- GitHub-Description und Topics über GitHub CLI gesetzt.
+- GitHub-Description, Topics, Discussions, Security-Funktionen und Branch Protection über GitHub CLI/API gesetzt.
 
 ## Nicht durchgeführte Änderungen
 
@@ -123,9 +124,9 @@ Keine Korrektur erforderlich.
 
 Keine zwingenden manuellen Aufgaben.
 
-- Social Preview auf GitHub hochladen, idealerweise aus `docs/assets/repository-hero.svg`.
-- Private Vulnerability Reporting, Secret Scanning und Branch Protection in GitHub aktivieren.
-- Prüfen, ob Wiki, Projects und Discussions für dieses Repository gewünscht sind.
+- Social Preview aus `docs/assets/social-preview.png` über die GitHub-Weboberfläche hochladen.
+- Prüfen, ob Wiki und Projects weiterhin benötigt werden.
+- Entscheiden, ob versionierte Releases für kuratierte GPT-Stände eingeführt werden sollen.
 - Fachliche und rechtliche Prüfung vor produktiver Veröffentlichung einzelner GPT-Artefakte durchführen.
 
 ## Endzustand
