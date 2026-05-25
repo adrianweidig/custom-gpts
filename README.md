@@ -117,10 +117,12 @@ Deutsch ist die Standardsprache des Repositorys. GitHub zeigt die normale Reposi
 - [`docs/de/`](docs/de/index.md) enthält die deutsche Dokumentationsroute.
 - [`docs/en/`](docs/en/index.md) enthält die englische Dokumentationsroute.
 - Englische Paketübersichten liegen als `README.en.md` neben den deutschen Paket-READMEs, sofern der Ordner für internationale Nutzer relevant ist.
+- Produktkomponenten liegen zusätzlich pro GPT unter `i18n/<sprachcode>/`, zum Beispiel [`Promptgenerator/i18n/en/`](Promptgenerator/i18n/en/README.md) oder [`OpenWebUI Model Builder/i18n/ja/`](OpenWebUI%20Model%20Builder/i18n/ja/README.md).
+- Direkt integrierte Produktsprachen sind Englisch, Spanisch, Französisch, Portugiesisch (Brasilien), Italienisch, Niederländisch, Polnisch, Türkisch, vereinfachtes Chinesisch und Japanisch.
 - Deutsch bleibt der stabile Fallback, wenn keine Sprache zuverlässig ermittelt oder gewünscht wird.
 - UTF-8 bleibt verbindlich; Umlaute, Akzente, nicht-lateinische Zeichen, Emojis und bidirektionale Texte dürfen nicht durch ASCII-Umschreibungen ersetzt werden.
 
-Die GPT-Artefakte selbst bleiben fachliche Quellartefakte. Viele GPTs reagieren auf die Sprache der Nutzeranfrage; technische IDs, Dateinamen, Modellparameter und Importformate werden dabei nicht übersetzt.
+Die deutschen GPT-Artefakte bleiben die kanonischen fachlichen Quellartefakte. Die Sprachpakete stellen lokalisierte Systemprompt-, Bootloader-, Info-, Wissens- und Beispiel-Komponenten bereit und verweisen auf diese Quellen. Technische IDs, Dateinamen, Modellparameter und Importformate werden dabei nicht übersetzt.
 
 ## Qualitätsgrenzen
 
@@ -149,6 +151,8 @@ Sichere lokale Prüfungen:
 ```powershell
 git status --short --branch
 git diff --check
+python scripts/generate_product_i18n.py
+python scripts/validate_repository_i18n.py
 ```
 
 Der GitHub-Workflow [`Repository Health`](.github/workflows/repository-health.yml) prüft zusätzlich, ob zentrale Community-Dateien vorhanden sind und ob lokale Markdown-Links sowie referenzierte Bilder auf vorhandene Dateien zeigen.

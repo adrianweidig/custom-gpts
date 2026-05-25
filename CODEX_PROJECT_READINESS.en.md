@@ -22,6 +22,7 @@ Important contents:
 - English landing page in `README.en.md`
 - project-specific Codex rules in `AGENTS.md`
 - GPT subfolders with `README.md`, `README.en.md`, `customgpt_infos.md`, `systemprompt.md`, `fachwissen.md`, `bootloader.md` and sometimes assets
+- GPT subfolders with product language packs under `i18n/<language-code>/` for ten additional languages
 - new GPT subfolders can additionally include `beispiel.md` or suitable `beispiel.*` files as sample artifacts
 - problem briefings under `OpenWebUI Model Builder/Problemfälle/`
 - explicit documentation routes under `docs/de/` and `docs/en/`
@@ -58,6 +59,7 @@ The Repository Health workflow checks required files, i18n structure, local Mark
 
 - German is the repository default language.
 - English is the primary alternative language.
+- Product component packs are integrated for English, Spanish, French, Portuguese (Brazil), Italian, Dutch, Polish, Turkish, Chinese (Simplified) and Japanese.
 - GitHub's normal repository view does not automatically switch by visitor language; visible language links and parallel files provide navigation.
 - GPT source artifacts remain German unless a domain-reviewed translation exists.
 - Technical IDs, filenames, URLs, JSON keys, model parameters and import formats are not translated.

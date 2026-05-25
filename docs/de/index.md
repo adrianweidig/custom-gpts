@@ -9,6 +9,7 @@ Dies ist die deutsche Standarddokumentation für das Repository `custom-gpts`.
 - [Repository-Startseite](../../README.md)
 - [FAQ](FAQ.md)
 - [Internationalisierung](I18N.md)
+- Produkt-Sprachpakete, zum Beispiel [PromptForge Englisch](../../Promptgenerator/i18n/en/README.md)
 - [Release-Prozess](RELEASE_PROCESS.md)
 - [Maintainer-Checkliste](MAINTAINER_CHECKLIST.md)
 

@@ -9,6 +9,7 @@ Alle relevanten Repository-Änderungen sollen hier nachvollziehbar dokumentiert 
 ### Added
 
 - Mehrsprachige Repository-Struktur mit `README.en.md`, `docs/de/`, `docs/en/`, englischen Community-Dateien und englischen Paketübersichten.
+- Produkt-Sprachpakete für alle zentralen GPT-Ordner in zehn zusätzlichen Sprachen: Englisch, Spanisch, Französisch, Portugiesisch (Brasilien), Italienisch, Niederländisch, Polnisch, Türkisch, vereinfachtes Chinesisch und Japanisch.
 - i18n-/UTF-8-Validierung über `scripts/validate_repository_i18n.py` und den Repository-Health-Workflow.
 - Neue konzipierte GPT-Pakete für Code-Review/Refactoring, Testfall-Design, Recherche-Briefings und Entscheidungsvorlagen.
 - Beispielartefakt-Konvention mit `beispiel.md` oder passenden `beispiel.*` Dateien.

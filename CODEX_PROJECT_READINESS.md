@@ -22,6 +22,7 @@ Wichtige Inhalte:
 - englische Startseite in `README.en.md`
 - projektspezifische Codex-Regeln in `AGENTS.md`
 - GPT-Unterordner mit `README.md`, `customgpt_infos.md`, `systemprompt.md`, `fachwissen.md`, `bootloader.md` und teils Assets
+- GPT-Unterordner mit Produkt-Sprachpaketen unter `i18n/<sprachcode>/` für zehn zusätzliche Sprachen
 - neue GPT-Unterordner können zusätzlich `beispiel.md` oder passende `beispiel.*` Dateien als Musterartefakte enthalten
 - Problemfall-Briefings unter `OpenWebUI Model Builder/Problemfälle/`
 
@@ -103,6 +104,7 @@ Keine Korrektur erforderlich.
 - `.github`-Vorlagen, Dependabot-Konfiguration und Repository-Health-Workflow ergänzt.
 - `docs/` mit FAQ, Release-Prozess, Maintainer-Checkliste und Hero-SVG ergänzt.
 - `scripts/validate_repository_i18n.py` für i18n-, Sprachlink-, Unicode-, UTF-8- und Linkvalidierung ergänzt.
+- `scripts/generate_product_i18n.py` und produktlokale Sprachpakete für lokalisierte `systemprompt.md`, `customgpt_infos.md`, `bootloader.md`, `fachwissen.md` und `beispiel.md` ergänzt.
 - Social-Preview-PNG ergänzt.
 - `.editorconfig` und `.gitattributes` ergänzt.
 - `AGENTS.md` an den neuen Repository-Health-Workflow angepasst.
