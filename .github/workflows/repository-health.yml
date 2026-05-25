@@ -79,3 +79,109 @@ jobs:
               sys.exit(1)
 
           print(f"Checked {len(markdown_files)} Markdown files.")
+
+      - name: Validate UTF-8 and German umlaut spelling
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+          import subprocess
+          import sys
+
+          root = Path(".").resolve()
+          text_suffixes = {
+              ".css",
+              ".editorconfig",
+              ".gitattributes",
+              ".gitignore",
+              ".html",
+              ".js",
+              ".json",
+              ".md",
+              ".py",
+              ".svg",
+              ".ts",
+              ".txt",
+              ".yaml",
+              ".yml",
+          }
+          prose_suffixes = {".md"}
+          forbidden_prose_spellings = [
+              "vollstaendig",
+              "vollstaendige",
+              "vollstaendigen",
+              "fuer",
+              "ueber",
+              "pruefen",
+              "pruefung",
+              "unterstuetzt",
+              "unterstuetzung",
+              "moeglich",
+              "koennen",
+              "koennte",
+              "muessen",
+              "zusaetzlich",
+              "praesentation",
+              "erklaeren",
+              "oeffentlich",
+              "rueckfrage",
+              "schluessel",
+          ]
+          forbidden_pattern = re.compile(
+              r"\b(" + "|".join(re.escape(word) for word in forbidden_prose_spellings) + r")\b",
+              re.IGNORECASE,
+          )
+          fenced_code_pattern = re.compile(r"```.*?```", re.DOTALL)
+          inline_code_pattern = re.compile(r"`[^`\n]+`")
+          technical_line_markers = (
+              "Technische Modell-ID",
+              "Technische ID",
+              "technische Modell-ID",
+              "technische ID",
+          )
+
+          tracked_files = [
+              raw_path.decode("utf-8")
+              for raw_path in subprocess.check_output(["git", "ls-files", "-z"]).split(b"\0")
+              if raw_path
+          ]
+
+          errors = []
+          checked_text_files = 0
+          checked_prose_files = 0
+          for relative_path in tracked_files:
+              path = root / relative_path
+              suffix = path.suffix.lower()
+              if suffix not in text_suffixes and path.name not in text_suffixes:
+                  continue
+
+              checked_text_files += 1
+              data = path.read_bytes()
+              try:
+                  text = data.decode("utf-8")
+              except UnicodeDecodeError as exc:
+                  errors.append(f"{relative_path}: not valid UTF-8: {exc}")
+                  continue
+
+              if suffix not in prose_suffixes:
+                  continue
+
+              checked_prose_files += 1
+              prose_text = fenced_code_pattern.sub("", text)
+              prose_text = inline_code_pattern.sub("", prose_text)
+              for line_number, line in enumerate(prose_text.splitlines(), start=1):
+                  if any(marker in line for marker in technical_line_markers):
+                      continue
+                  match = forbidden_pattern.search(line)
+                  if match:
+                      errors.append(
+                          f"{relative_path}:{line_number}: use real UTF-8 umlaut spelling instead of {match.group(0)!r}"
+                      )
+
+          if errors:
+              for error in errors:
+                  print(error)
+              sys.exit(1)
+
+          print(f"Checked UTF-8 for {checked_text_files} text files.")
+          print(f"Checked German umlaut spellings in {checked_prose_files} Markdown files.")
