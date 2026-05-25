@@ -6,6 +6,8 @@ import sys
 from pathlib import Path
 from urllib.parse import unquote
 
+from generate_product_i18n import COMPONENTS, LANGUAGES, PRODUCTS
+
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -219,6 +221,28 @@ def validate_unicode_fixtures(errors: list[str]) -> None:
             errors.append(f"Missing Unicode fixture in i18n docs: {fixture}")
 
 
+def validate_product_language_packs(errors: list[str]) -> None:
+    for product in PRODUCTS:
+        for language in LANGUAGES:
+            locale_root = ROOT / product.folder / "i18n" / language.code
+            if not locale_root.exists():
+                errors.append(f"{product.folder}: missing product language pack: i18n/{language.code}")
+                continue
+            for filename in COMPONENTS:
+                path = locale_root / filename
+                relative = path.relative_to(ROOT).as_posix()
+                if not path.exists():
+                    errors.append(f"{relative}: missing localized product component")
+                    continue
+                text = read_text(path, errors)
+                if language.label not in text:
+                    errors.append(f"{relative}: missing language label {language.label!r}")
+                if "Canonical Source Files" not in text:
+                    errors.append(f"{relative}: missing canonical source section")
+                if "Keep commands, filenames, IDs, JSON fields, API names and model parameters unchanged." not in text:
+                    errors.append(f"{relative}: missing technical identifier preservation rule")
+
+
 def main() -> int:
     errors: list[str] = []
     files = tracked_files()
@@ -229,6 +253,7 @@ def main() -> int:
     validate_links(markdown_files, errors)
     validate_utf8_and_umlauts(files, errors)
     validate_unicode_fixtures(errors)
+    validate_product_language_packs(errors)
 
     if errors:
         for error in errors:
@@ -236,7 +261,7 @@ def main() -> int:
         return 1
 
     print(f"Checked {len(markdown_files)} Markdown files.")
-    print("Validated required i18n files, language links, local links, UTF-8 and Unicode fixtures.")
+    print("Validated required i18n files, product language packs, language links, local links, UTF-8 and Unicode fixtures.")
     return 0
 
 

@@ -117,10 +117,12 @@ German is the default language of this repository. GitHub does not automatically
 - [`docs/de/`](docs/de/index.md) contains the German documentation route.
 - [`docs/en/`](docs/en/index.md) contains the English documentation route.
 - English package overviews are stored as `README.en.md` next to the German package READMEs where the folder is relevant for international users.
+- Product components are additionally available per GPT under `i18n/<language-code>/`, for example [`Promptgenerator/i18n/en/`](Promptgenerator/i18n/en/README.md) or [`OpenWebUI Model Builder/i18n/ja/`](OpenWebUI%20Model%20Builder/i18n/ja/README.md).
+- Directly integrated product languages are English, Spanish, French, Portuguese (Brazil), Italian, Dutch, Polish, Turkish, Chinese (Simplified) and Japanese.
 - German remains the stable fallback when no language is reliably available or requested.
 - UTF-8 is mandatory. Umlauts, accents, non-Latin scripts, emojis and bidirectional text must not be replaced with ASCII-only spellings.
 
-The GPT artifacts themselves remain domain source artifacts. Many GPTs respond in the user's language; technical IDs, filenames, model parameters and import formats are not translated.
+The German GPT artifacts remain the canonical domain source artifacts. The language packs provide localized system prompt, bootloader, info, knowledge and example components and link back to those sources. Technical IDs, filenames, model parameters and import formats are not translated.
 
 ## Quality Boundaries
 
@@ -149,6 +151,7 @@ Safe local checks:
 ```powershell
 git status --short --branch
 git diff --check
+python scripts/generate_product_i18n.py
 python scripts/validate_repository_i18n.py
 ```
 

@@ -49,6 +49,7 @@ Der GitHub-Workflow `Repository Health` prüft zentrale Community-Dateien, i18n-
 - Deutsche Fließtexte mit echten UTF-8-Umlauten schreiben.
 - Deutsch ist die Standardsprache. Englische Alternativdateien wie `README.en.md`, `CONTRIBUTING.en.md`, `CHANGELOG.en.md`, `SECURITY.en.md`, `SUPPORT.en.md`, `CODE_OF_CONDUCT.en.md` und `docs/en/*` konsistent halten.
 - Zentrale deutsche Dokumentation liegt unter `docs/de/`; englische Dokumentation liegt unter `docs/en/`. Top-Level-README und Community-Dateien bleiben deutsch.
+- Produkt-Sprachpakete liegen pro GPT unter `i18n/<sprachcode>/` und werden mit `python scripts/generate_product_i18n.py` reproduzierbar erzeugt.
 - Jede zentrale mehrsprachige Markdown-Datei beginnt mit konkreten Sprachlinks.
 - Keine ASCII-Umschreibungen deutscher Umlaute in Fließtexten verwenden, z. B. `vollstaendig`, `fuer`, `ueber`, `pruefen`, `unterstuetzt` statt `vollständig`, `für`, `über`, `prüfen`, `unterstützt`.
 - Technische Slugs, IDs, Dateinamen, URLs und Modellparameter nicht blind eindeutschen.
