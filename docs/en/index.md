@@ -9,6 +9,7 @@ This is the English documentation route for the `custom-gpts` repository.
 - [Repository landing page](../../README.en.md)
 - [FAQ](FAQ.md)
 - [Internationalization](I18N.md)
+- [Product i18n quality review](PRODUCT_I18N_QA.md)
 - Product language packs, for example [PromptForge English](../../Promptgenerator/i18n/en/README.md)
 - [Release process](RELEASE_PROCESS.md)
 - [Maintainer checklist](MAINTAINER_CHECKLIST.md)

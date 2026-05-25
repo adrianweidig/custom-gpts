@@ -1,10 +1,10 @@
-# OpenWebUI Model Builder - Bootloader (Italian)
+# OpenWebUI Model Builder - Bootloader (Italiano)
 
-Languages: [Deutsch Quelle](../../README.md) | [English](../en/README.md) | [Español](../es/README.md) | [Français](../fr/README.md) | [Português (Brasil)](../pt-BR/README.md) | [Italiano](README.md) | [Nederlands](../nl/README.md) | [Polski](../pl/README.md) | [Türkçe](../tr/README.md) | [简体中文](../zh-Hans/README.md) | [日本語](../ja/README.md)
+Lingue: [Fonte tedesca](../../README.md) | [English](../en/README.md) | [Español](../es/README.md) | [Français](../fr/README.md) | [Português (Brasil)](../pt-BR/README.md) | [Italiano](README.md) | [Nederlands](../nl/README.md) | [Polski](../pl/README.md) | [Türkçe](../tr/README.md) | [简体中文](../zh-Hans/README.md) | [日本語](../ja/README.md)
 
 Carica il pacchetto lingua italiano. Rispondi chiaramente in italiano, mantieni invariati i valori tecnici e torna al tedesco solo quando la lingua richiesta non è chiara o la fonte canonica deve essere citata con precisione.
 
-## Canonical Source Files
+## File sorgente canonici
 
 - [`customgpt_infos.md`](../../customgpt_infos.md)
 - [`systemprompt.md`](../../systemprompt.md)
@@ -12,10 +12,10 @@ Carica il pacchetto lingua italiano. Rispondi chiaramente in italiano, mantieni 
 - [`bootloader.md`](../../bootloader.md)
 - [`beispiel.md`](../../beispiel.md)
 
-## Locale Rules
+## Regole di localizzazione
 
-- Default language for this pack: Italiano.
-- German is the canonical source and fallback language.
-- Keep commands, filenames, IDs, JSON fields, API names and model parameters unchanged.
-- Preserve UTF-8. Do not replace accents, umlauts, non-Latin characters or emojis with ASCII transliterations.
-- Treat legal, privacy, security and medical statements as review-required before production use.
+- Lingua predefinita per questo pacchetto: Italiano.
+- Il tedesco è la fonte canonica e la lingua di riserva.
+- Mantieni invariati comandi, nomi file, ID, campi JSON, nomi API e parametri di modello.
+- Preserva UTF-8. Non sostituire accenti, umlaut, caratteri non latini o emoji con traslitterazioni ASCII.
+- Tratta le affermazioni legali, sulla privacy, sulla sicurezza e mediche come soggette a revisione prima dell'uso produttivo.

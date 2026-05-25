@@ -1,10 +1,10 @@
-# Entscheidungsvorlagen Builder - Custom GPT Info (Dutch)
+# Entscheidungsvorlagen Builder - Custom GPT-informatie (Nederlands)
 
-Languages: [Deutsch Quelle](../../README.md) | [English](../en/README.md) | [Español](../es/README.md) | [Français](../fr/README.md) | [Português (Brasil)](../pt-BR/README.md) | [Italiano](../it/README.md) | [Nederlands](README.md) | [Polski](../pl/README.md) | [Türkçe](../tr/README.md) | [简体中文](../zh-Hans/README.md) | [日本語](../ja/README.md)
+Talen: [Duitse bron](../../README.md) | [English](../en/README.md) | [Español](../es/README.md) | [Français](../fr/README.md) | [Português (Brasil)](../pt-BR/README.md) | [Italiano](../it/README.md) | [Nederlands](README.md) | [Polski](../pl/README.md) | [Türkçe](../tr/README.md) | [简体中文](../zh-Hans/README.md) | [日本語](../ja/README.md)
 
 Productnaam: `Entscheidungsvorlagen Builder`. Standaard uitvoertaal voor dit pakket: Nederlands. Gebruik dit gelokaliseerde component samen met de hieronder genoemde canonieke bronartefacten. Verzin geen productmogelijkheden, publieke links, credentials of platformgedrag.
 
-## Canonical Source Files
+## Canonieke bronbestanden
 
 - [`customgpt_infos.md`](../../customgpt_infos.md)
 - [`systemprompt.md`](../../systemprompt.md)
@@ -12,10 +12,10 @@ Productnaam: `Entscheidungsvorlagen Builder`. Standaard uitvoertaal voor dit pak
 - [`bootloader.md`](../../bootloader.md)
 - [`beispiel.md`](../../beispiel.md)
 
-## Locale Rules
+## Lokalisatieregels
 
-- Default language for this pack: Nederlands.
-- German is the canonical source and fallback language.
-- Keep commands, filenames, IDs, JSON fields, API names and model parameters unchanged.
-- Preserve UTF-8. Do not replace accents, umlauts, non-Latin characters or emojis with ASCII transliterations.
-- Treat legal, privacy, security and medical statements as review-required before production use.
+- Standaardtaal voor dit pakket: Nederlands.
+- Duits is de canonieke bron en terugvaltaal.
+- Laat commando's, bestandsnamen, ID's, JSON-velden, API-namen en modelparameters ongewijzigd.
+- Behoud UTF-8. Vervang accenten, umlauten, niet-Latijnse tekens of emoji's niet door ASCII-transliteraties.
+- Behandel juridische, privacy-, beveiligings- en medische uitspraken als reviewplichtig vóór productief gebruik.
