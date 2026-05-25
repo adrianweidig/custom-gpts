@@ -1,5 +1,7 @@
 # Testfall-Generator
 
+Sprachen: [Deutsch](README.md) | [English](README.en.md)
+
 Lokaler Projektordner für einen Custom GPT zur Ableitung strukturierter Testfälle aus Anforderungen, User Stories, Bugreports und Akzeptanzkriterien.
 
 ## Status

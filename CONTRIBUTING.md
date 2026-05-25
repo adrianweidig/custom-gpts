@@ -1,5 +1,7 @@
 # Mitwirken
 
+Sprachen: [Deutsch](CONTRIBUTING.md) | [English](CONTRIBUTING.en.md)
+
 Danke für dein Interesse an diesem Repository. Seit dem 24. Mai 2026 wird dieses Repository nicht mehr aktiv weiterentwickelt. Beiträge können weiterhin helfen, die vorhandenen GPT-Artefakte präziser, konsistenter oder besser nachvollziehbar zu machen, es gibt aber keine verbindliche Zusage für Review, Merge oder Support.
 
 ## Geeignete Beiträge
@@ -33,6 +35,7 @@ Prüfe zusätzlich manuell:
 - lokale Markdown-Links und Bildpfade
 - Tabellen und Überschriften
 - UTF-8-Umlaute in deutschem Fließtext
+- konsistente Sprachlinks in `README.md`, `README.en.md`, Paket-READMEs und `docs/de`/`docs/en`
 - unveränderte technische Slugs, Modell-IDs, Dateinamen und URLs
 - keine echten Secrets, Tokens, Passwörter, API-Keys, Kundendaten oder personenbezogenen Daten
 
@@ -49,6 +52,7 @@ Pull Requests werden best-effort geprüft. Für aktive Weiterentwicklung oder ei
 ## Stilregeln
 
 - Schreibe klare, konkrete deutsche Dokumentation.
+- Ergänze englische Alternativdateien, wenn eine zentrale Repository-, Community- oder Paketübersicht geändert wird.
 - Nutze echte UTF-8-Umlaute in Fließtext.
 - Ändere technische IDs, Slugs, Dateinamen, URLs und Modellparameter nur bewusst.
 - Vermeide großflächige Umformulierungen ohne fachlichen Grund.

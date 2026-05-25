@@ -1,11 +1,15 @@
 # Changelog
 
+Sprachen: [Deutsch](CHANGELOG.md) | [English](CHANGELOG.en.md)
+
 Alle relevanten Repository-Änderungen sollen hier nachvollziehbar dokumentiert werden.
 
 ## Unreleased
 
 ### Added
 
+- Mehrsprachige Repository-Struktur mit `README.en.md`, `docs/de/`, `docs/en/`, englischen Community-Dateien und englischen Paketübersichten.
+- i18n-/UTF-8-Validierung über `scripts/validate_repository_i18n.py` und den Repository-Health-Workflow.
 - Neue konzipierte GPT-Pakete für Code-Review/Refactoring, Testfall-Design, Recherche-Briefings und Entscheidungsvorlagen.
 - Beispielartefakt-Konvention mit `beispiel.md` oder passenden `beispiel.*` Dateien.
 

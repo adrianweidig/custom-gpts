@@ -1,5 +1,7 @@
 # Research Briefing Builder
 
+Sprachen: [Deutsch](README.md) | [English](README.en.md)
+
 Lokaler Projektordner für einen Custom GPT zur Erstellung strukturierter Recherche-Briefings, Quellenvergleiche und Entscheidungsgrundlagen.
 
 ## Status

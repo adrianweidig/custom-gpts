@@ -30,9 +30,10 @@ Es gibt keinen Dev-Server und keinen zentralen Build. Nützliche Prüfungen:
 ```powershell
 git status --short --branch
 git diff --check
+python scripts/validate_repository_i18n.py
 ```
 
-Der GitHub-Workflow `Repository Health` prüft zentrale Community-Dateien sowie lokale Markdown-Links und Bildpfade.
+Der GitHub-Workflow `Repository Health` prüft zentrale Community-Dateien, i18n-Pflichtdateien, lokale Markdown-Links, Bildpfade, UTF-8 und Unicode-Fixtures.
 
 ## Tests, Build, Linting und Formatierung
 
@@ -46,13 +47,16 @@ Der GitHub-Workflow `Repository Health` prüft zentrale Community-Dateien sowie 
 
 - Kleine, zielgenaue Änderungen mit minimalem Diff.
 - Deutsche Fließtexte mit echten UTF-8-Umlauten schreiben.
+- Deutsch ist die Standardsprache. Englische Alternativdateien wie `README.en.md`, `CONTRIBUTING.en.md`, `CHANGELOG.en.md`, `SECURITY.en.md`, `SUPPORT.en.md`, `CODE_OF_CONDUCT.en.md` und `docs/en/*` konsistent halten.
+- Zentrale deutsche Dokumentation liegt unter `docs/de/`; englische Dokumentation liegt unter `docs/en/`. Top-Level-README und Community-Dateien bleiben deutsch.
+- Jede zentrale mehrsprachige Markdown-Datei beginnt mit konkreten Sprachlinks.
 - Keine ASCII-Umschreibungen deutscher Umlaute in Fließtexten verwenden, z. B. `vollstaendig`, `fuer`, `ueber`, `pruefen`, `unterstuetzt` statt `vollständig`, `für`, `über`, `prüfen`, `unterstützt`.
 - Technische Slugs, IDs, Dateinamen, URLs und Modellparameter nicht blind eindeutschen.
 - Dateien als UTF-8 ohne unnötige Encoding-Wechsel pflegen; `.editorconfig` und `.gitattributes` sind dafür verbindlich.
 - Prompt-Artefakte eines GPTs gemeinsam betrachten: `README.md`, `customgpt_infos.md`, `systemprompt.md`, `fachwissen.md`, `bootloader.md` und vorhandene `beispiel.*` Dateien.
 - Neue oder grundlegend überarbeitete GPT-Pakete sollen mindestens ein Beispielartefakt enthalten: `beispiel.md` für Musterantworten oder passende `beispiel.*` Dateien für konkrete Code-, JSON-, HTML- oder Dokumentartefakte.
 - Beispielartefakte müssen vollständig, realistisch und frei von echten Secrets, Kundendaten oder personenbezogenen Daten sein.
-- Öffentliche Community-Dateien wie `CONTRIBUTING.md`, `SECURITY.md`, `SUPPORT.md`, `CHANGELOG.md`, `.github/ISSUE_TEMPLATE/*` und `.github/PULL_REQUEST_TEMPLATE.md` konsistent halten, wenn sich Repository-Prozesse ändern.
+- Öffentliche Community-Dateien wie `CONTRIBUTING.md`, `CONTRIBUTING.en.md`, `SECURITY.md`, `SECURITY.en.md`, `SUPPORT.md`, `SUPPORT.en.md`, `CHANGELOG.md`, `CHANGELOG.en.md`, `.github/ISSUE_TEMPLATE/*` und `.github/PULL_REQUEST_TEMPLATE.md` konsistent halten, wenn sich Repository-Prozesse ändern.
 - Keine großflächigen Umformulierungen, wenn dadurch Prompt-Verhalten oder fachliche Bedeutung unklar verändert würde.
 - Icons und binäre Assets nicht ohne klaren Auftrag verändern.
 
@@ -102,6 +106,7 @@ Vor dem Abschluss ausführen oder begründet auslassen:
 
 ```powershell
 git diff --check
+python scripts/validate_repository_i18n.py
 git status --short --branch
 ```
 

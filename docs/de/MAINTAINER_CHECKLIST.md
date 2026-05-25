@@ -1,6 +1,6 @@
 # Maintainer-Checkliste
 
-Sprachen: [Deutsch](de/MAINTAINER_CHECKLIST.md) | [English](en/MAINTAINER_CHECKLIST.md)
+Sprachen: [Deutsch](MAINTAINER_CHECKLIST.md) | [English](../en/MAINTAINER_CHECKLIST.md)
 
 Diese Datei dokumentiert erledigte Repository-Einstellungen und verbleibende Schritte, die GitHub-Rechte, UI-Zugriff oder bewusste Maintainer-Entscheidungen erfordern.
 
@@ -21,13 +21,20 @@ Diese Datei dokumentiert erledigte Repository-Einstellungen und verbleibende Sch
   - stale Reviews werden bei neuen Commits verworfen
   - Conversation Resolution erforderlich
   - Force Pushes und Branch-Löschung deaktiviert
-- Social-Preview-PNG erstellt: [`docs/assets/social-preview.png`](assets/social-preview.png)
+- Social-Preview-PNG erstellt: [`docs/assets/social-preview.png`](../assets/social-preview.png)
 - Kuratierter Snapshot-Release `public-readiness-2026-05-24` vorbereitet.
+
+## Erledigt am 2026-05-25
+
+- Deutsche Standardstruktur mit englischen Alternativdateien ergänzt.
+- `docs/de/` und `docs/en/` als explizite Dokumentationsrouten angelegt.
+- Repository-Health-Workflow um i18n-, Sprachlink- und Unicode-Prüfungen erweitert.
 
 ## GitHub Repository Settings
 
-- Social Preview aus [`docs/assets/social-preview.png`](assets/social-preview.png) in GitHub hochladen. GitHub dokumentiert dafür den Upload über `Settings` -> `Social preview`; ein direkter REST-/GitHub-CLI-Upload wurde nicht verfügbar gemacht.
+- Social Preview aus [`docs/assets/social-preview.png`](../assets/social-preview.png) in GitHub hochladen. GitHub dokumentiert dafür den Upload über `Settings` -> `Social preview`; ein direkter REST-/GitHub-CLI-Upload wurde nicht verfügbar gemacht.
 - Prüfen, ob Wiki und Projects weiterhin benötigt werden. Beide Funktionen waren bereits aktiviert und wurden nicht deaktiviert, um keine bestehenden externen Arbeitsflächen zu beeinflussen.
+- GitHub Pages ist nicht als neue Infrastruktur aktiviert. Wenn später eine Projektwebsite ergänzt wird, soll Deutsch die Standardroute und Englisch die erste Alternativroute sein.
 
 ## Security
 

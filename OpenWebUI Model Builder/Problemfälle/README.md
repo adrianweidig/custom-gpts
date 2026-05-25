@@ -1,5 +1,7 @@
 # Offline-Problemfall-Briefings für den OpenWebUI Model Builder
 
+Sprachen: [Deutsch](README.md) | [English](README.en.md)
+
 Dieser Ordner enthält Markdown-Briefings für allgemeine OpenWebUI-Aufgabenmodelle. Jede Datei ist als Eingabe für den Custom GPT `OpenWebUI Model Builder` formuliert.
 
 Die Briefings sind bewusst **offline-first**:

@@ -1,32 +1,32 @@
-name: Dokumentation verbessern
-description: Melde fehlende, unklare oder widersprüchliche Dokumentation.
+name: Dokumentation verbessern / Improve documentation
+description: Melde fehlende, unklare oder widersprüchliche Dokumentation. English reports are welcome.
 title: "[Docs]: "
 body:
   - type: input
     id: page
     attributes:
-      label: Datei oder Abschnitt
+      label: Datei oder Abschnitt / File or section
       description: Welche Dokumentation ist betroffen?
     validations:
       required: true
   - type: textarea
     id: issue
     attributes:
-      label: Was sollte verbessert werden?
-      description: Beschreibe die Lücke oder den Widerspruch.
+      label: Was sollte verbessert werden? / What should be improved?
+      description: Beschreibe die Lücke oder den Widerspruch. You may write in German or English.
     validations:
       required: true
   - type: textarea
     id: suggestion
     attributes:
-      label: Konkreter Vorschlag
+      label: Konkreter Vorschlag / Concrete proposal
       description: Falls du bereits eine Formulierung oder Strukturidee hast, füge sie hier ein.
     validations:
       required: false
   - type: checkboxes
     id: checks
     attributes:
-      label: Prüfung
+      label: Prüfung / Check
       options:
-        - label: Ich habe geprüft, dass die Meldung keine vertraulichen oder personenbezogenen Informationen enthält.
+        - label: Ich habe geprüft, dass die Meldung keine vertraulichen oder personenbezogenen Informationen enthält. / I have checked that this report contains no confidential or personal information.
           required: true

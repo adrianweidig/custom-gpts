@@ -1,5 +1,7 @@
 # CustomGPTs
 
+Sprachen: [Deutsch](README.md) | [English](README.en.md)
+
 > **Maintenance-Status seit 24. Mai 2026:** Dieses Repository ist als öffentliche Referenz- und Vorlagensammlung abgeschlossen. Es findet keine aktive Weiterentwicklung mehr statt. Inhalte bleiben nutzbar, Issues und Pull Requests werden nicht verbindlich bearbeitet.
 
 ![CustomGPTs repository overview](docs/assets/repository-hero.png)
@@ -18,8 +20,10 @@ Dieses Projekt ist kein installierbares Softwarepaket und keine zentrale Anwendu
 - [GPT-Übersicht](#öffentliche-chatgpt-links)
 - [Repository-Struktur](#repository-struktur)
 - [Lokale Nutzung](#lokale-nutzung)
+- [Internationalisierung](#internationalisierung)
 - [Qualitätschecks](#qualitätschecks)
 - [Mitwirken](CONTRIBUTING.md)
+- [English README](README.en.md)
 - [Security Policy](SECURITY.md)
 - [Support](SUPPORT.md)
 - [Changelog](CHANGELOG.md)
@@ -104,6 +108,20 @@ Die einzelnen Artefakte haben unterschiedliche Rollen:
 | `beispiel.md` oder `beispiel.*` | Musterantwort, Musterdatei oder mehrere Beispielartefakte für die erwartete Ausgabequalität |
 | `icon.png` | Symbolgrafik, falls im jeweiligen Ordner vorhanden |
 
+## Internationalisierung
+
+Deutsch ist die Standardsprache des Repositorys. GitHub zeigt die normale Repository-Ansicht nicht automatisch abhängig von der Besuchersprache an; deshalb sind Sprachversionen explizit über Dateien und Links organisiert.
+
+- [`README.md`](README.md) ist die deutsche Startseite.
+- [`README.en.md`](README.en.md) ist die englische Startseite.
+- [`docs/de/`](docs/de/index.md) enthält die deutsche Dokumentationsroute.
+- [`docs/en/`](docs/en/index.md) enthält die englische Dokumentationsroute.
+- Englische Paketübersichten liegen als `README.en.md` neben den deutschen Paket-READMEs, sofern der Ordner für internationale Nutzer relevant ist.
+- Deutsch bleibt der stabile Fallback, wenn keine Sprache zuverlässig ermittelt oder gewünscht wird.
+- UTF-8 bleibt verbindlich; Umlaute, Akzente, nicht-lateinische Zeichen, Emojis und bidirektionale Texte dürfen nicht durch ASCII-Umschreibungen ersetzt werden.
+
+Die GPT-Artefakte selbst bleiben fachliche Quellartefakte. Viele GPTs reagieren auf die Sprache der Nutzeranfrage; technische IDs, Dateinamen, Modellparameter und Importformate werden dabei nicht übersetzt.
+
 ## Qualitätsgrenzen
 
 - Produktive Secrets, Tokens, Zugangsdaten, personenbezogene Daten und vertrauliche Kundendaten gehören nicht in dieses Repository.
@@ -138,12 +156,19 @@ Der GitHub-Workflow [`Repository Health`](.github/workflows/repository-health.ym
 ## Dokumentation
 
 - [Contribution Guide](CONTRIBUTING.md)
+- [Contribution Guide, English](CONTRIBUTING.en.md)
 - [Security Policy](SECURITY.md)
+- [Security Policy, English](SECURITY.en.md)
 - [Support](SUPPORT.md)
+- [Support, English](SUPPORT.en.md)
 - [Changelog](CHANGELOG.md)
-- [FAQ](docs/FAQ.md)
-- [Release-Prozess](docs/RELEASE_PROCESS.md)
-- [Maintainer-Checkliste](docs/MAINTAINER_CHECKLIST.md)
+- [Changelog, English](CHANGELOG.en.md)
+- [Dokumentation Deutsch](docs/de/index.md)
+- [Documentation English](docs/en/index.md)
+- [FAQ](docs/de/FAQ.md)
+- [Release-Prozess](docs/de/RELEASE_PROCESS.md)
+- [Maintainer-Checkliste](docs/de/MAINTAINER_CHECKLIST.md)
+- [Internationalisierung](docs/de/I18N.md)
 - [Codex Project Readiness](CODEX_PROJECT_READINESS.md)
 
 ## Mitwirken

@@ -1,5 +1,7 @@
 # Präsentationscreator
 
+Sprachen: [Deutsch](README.md) | [English](README.en.md)
+
 Lokaler Projektordner für den öffentlichen GPT `Präsentationscreator`.
 
 ## ChatGPT-Link

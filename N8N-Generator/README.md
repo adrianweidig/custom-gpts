@@ -1,5 +1,7 @@
 # n8n Workflow Architect
 
+Sprachen: [Deutsch](README.md) | [English](README.en.md)
+
 Lokaler Projektordner für den öffentlichen GPT `n8n Workflow Architect`.
 
 ## ChatGPT-Link

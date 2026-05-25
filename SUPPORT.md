@@ -1,5 +1,7 @@
 # Support
 
+Sprachen: [Deutsch](SUPPORT.md) | [English](SUPPORT.en.md)
+
 Dieses Repository wird seit dem 24. Mai 2026 nicht mehr aktiv weiterentwickelt. Die Inhalte bleiben als öffentliche Sammlung von Custom-GPT-Artefakten nutzbar, es gibt aber keinen verbindlichen Support und keine zugesagte Reaktionszeit.
 
 ## Geeignete Support-Anfragen

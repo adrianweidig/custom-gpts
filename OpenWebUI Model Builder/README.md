@@ -1,5 +1,7 @@
 # OpenWebUI Model Builder
 
+Sprachen: [Deutsch](README.md) | [English](README.en.md)
+
 Lokaler Projektordner für den öffentlichen GPT `OpenWebUI Model Builder`.
 
 ## ChatGPT-Link

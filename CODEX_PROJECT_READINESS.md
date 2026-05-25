@@ -1,8 +1,10 @@
 # Codex Project Readiness
 
+Sprachen: [Deutsch](CODEX_PROJECT_READINESS.md) | [English](CODEX_PROJECT_READINESS.en.md)
+
 ## Zusammenfassung
 
-Das Projekt wurde im aktuellen Arbeitskontext geprüft. Es ist ein arbeitsfähiges Markdown-/Prompt-Artefakt-Repository ohne zentrale Softwareanwendung, ohne Paketmanager und ohne fachliches Testframework. Git und GitHub sind eingerichtet. Für öffentliche Nutzung wurden Community-Dokumentation, Issue-/PR-Vorlagen und ein Repository-Health-Workflow ergänzt.
+Das Projekt wurde im aktuellen Arbeitskontext geprüft. Es ist ein arbeitsfähiges Markdown-/Prompt-Artefakt-Repository ohne zentrale Softwareanwendung, ohne Paketmanager und ohne fachliches Testframework. Git und GitHub sind eingerichtet. Für öffentliche Nutzung wurden Community-Dokumentation, Issue-/PR-Vorlagen, ein Repository-Health-Workflow und eine explizite deutsch/englische Dokumentationsstruktur ergänzt.
 
 ## Projektroot
 
@@ -17,6 +19,7 @@ Dokumentations- und Prompt-Artefakt-Repository für mehrere Custom-GPT-Konfigura
 Wichtige Inhalte:
 
 - zentrale Projektdokumentation in `README.md`
+- englische Startseite in `README.en.md`
 - projektspezifische Codex-Regeln in `AGENTS.md`
 - GPT-Unterordner mit `README.md`, `customgpt_infos.md`, `systemprompt.md`, `fachwissen.md`, `bootloader.md` und teils Assets
 - neue GPT-Unterordner können zusätzlich `beispiel.md` oder passende `beispiel.*` Dateien als Musterartefakte enthalten
@@ -61,6 +64,7 @@ Es ist keine Installation erforderlich.
 Es gibt keinen zentralen Build-, fachlichen Test-, Lint- oder Typecheck-Prozess. Als passende lokale Prüfungen wurden bzw. werden verwendet:
 
 - `git diff --check`
+- `python scripts/validate_repository_i18n.py`
 - `git status --short --branch`
 - Repository-Health-Linkcheck für lokale Markdown-Links und zentrale Community-Dateien
 
@@ -78,6 +82,7 @@ Codex kann das Projekt sinnvoll bearbeiten:
 - `README.md` beschreibt Struktur, Nutzung, Arbeitsweise und Community-Prozesse.
 - `.gitignore` schließt typische lokale Artefakte, Caches, Logs und `.env`-Dateien aus.
 - `.github/` enthält Issue-/PR-Vorlagen und einen Repository-Health-Workflow.
+- `docs/de/` und `docs/en/` enthalten explizite mehrsprachige Dokumentationsrouten.
 - Die Projektstruktur ist klein und nachvollziehbar.
 
 ## Geprüfte alte Pfade
@@ -93,9 +98,11 @@ Keine Korrektur erforderlich.
 ## Durchgeführte Änderungen
 
 - `README.md` öffentlichkeitsreif überarbeitet.
+- `README.en.md`, englische Community-Dateien, englische Paket-READMEs sowie `docs/de/` und `docs/en/` ergänzt.
 - Community-Dateien für Contribution, Security, Support, Code of Conduct und Changelog ergänzt.
 - `.github`-Vorlagen, Dependabot-Konfiguration und Repository-Health-Workflow ergänzt.
 - `docs/` mit FAQ, Release-Prozess, Maintainer-Checkliste und Hero-SVG ergänzt.
+- `scripts/validate_repository_i18n.py` für i18n-, Sprachlink-, Unicode-, UTF-8- und Linkvalidierung ergänzt.
 - Social-Preview-PNG ergänzt.
 - `.editorconfig` und `.gitattributes` ergänzt.
 - `AGENTS.md` an den neuen Repository-Health-Workflow angepasst.

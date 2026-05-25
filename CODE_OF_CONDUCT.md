@@ -1,5 +1,7 @@
 # Code of Conduct
 
+Sprachen: [Deutsch](CODE_OF_CONDUCT.md) | [English](CODE_OF_CONDUCT.en.md)
+
 Dieses Repository soll sachliche, respektvolle und produktive Zusammenarbeit ermöglichen.
 
 ## Erwartetes Verhalten

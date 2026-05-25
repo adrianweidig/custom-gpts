@@ -1,5 +1,7 @@
 # Security Policy
 
+Sprachen: [Deutsch](SECURITY.md) | [English](SECURITY.en.md)
+
 Dieses Repository enthält Prompt-, Wissens- und Dokumentationsartefakte. Es enthält keine produktive Anwendung, keinen Serverprozess und keine zentrale Runtime.
 
 ## Unterstützter Stand
