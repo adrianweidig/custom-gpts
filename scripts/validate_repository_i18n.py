@@ -6,7 +6,7 @@ import sys
 from pathlib import Path
 from urllib.parse import unquote
 
-from generate_product_i18n import COMPONENTS, LANGUAGES, PRODUCTS
+from generate_product_i18n import COMPONENTS, LANGUAGES, LOCALIZED_UI, PRODUCTS
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -224,6 +224,7 @@ def validate_unicode_fixtures(errors: list[str]) -> None:
 def validate_product_language_packs(errors: list[str]) -> None:
     for product in PRODUCTS:
         for language in LANGUAGES:
+            ui = LOCALIZED_UI[language.code]
             locale_root = ROOT / product.folder / "i18n" / language.code
             if not locale_root.exists():
                 errors.append(f"{product.folder}: missing product language pack: i18n/{language.code}")
@@ -237,9 +238,19 @@ def validate_product_language_packs(errors: list[str]) -> None:
                 text = read_text(path, errors)
                 if language.label not in text:
                     errors.append(f"{relative}: missing language label {language.label!r}")
-                if "Canonical Source Files" not in text:
+                if ui["canonical"] not in text:
                     errors.append(f"{relative}: missing canonical source section")
-                if "Keep commands, filenames, IDs, JSON fields, API names and model parameters unchanged." not in text:
+                if ui["rules"] not in text:
+                    errors.append(f"{relative}: missing localized locale-rules section")
+                if language.code != "en":
+                    forbidden_english_headings = ("Languages:", "## Canonical Source Files", "## Locale Rules")
+                    for heading in forbidden_english_headings:
+                        if heading in text:
+                            errors.append(f"{relative}: non-English language pack still contains English boilerplate heading: {heading}")
+                    if re.search(r"\bfallback\b", text, re.IGNORECASE):
+                        errors.append(f"{relative}: non-English language pack still contains untranslated fallback term")
+                required_terms = ("JSON", "API", "UTF-8")
+                if any(term not in text for term in required_terms):
                     errors.append(f"{relative}: missing technical identifier preservation rule")
 
 

@@ -1,6 +1,6 @@
 # Präsentationscreator - Example (English)
 
-Languages: [Deutsch Quelle](../../README.md) | [English](README.md) | [Español](../es/README.md) | [Français](../fr/README.md) | [Português (Brasil)](../pt-BR/README.md) | [Italiano](../it/README.md) | [Nederlands](../nl/README.md) | [Polski](../pl/README.md) | [Türkçe](../tr/README.md) | [简体中文](../zh-Hans/README.md) | [日本語](../ja/README.md)
+Languages: [German source](../../README.md) | [English](README.md) | [Español](../es/README.md) | [Français](../fr/README.md) | [Português (Brasil)](../pt-BR/README.md) | [Italiano](../it/README.md) | [Nederlands](../nl/README.md) | [Polski](../pl/README.md) | [Türkçe](../tr/README.md) | [简体中文](../zh-Hans/README.md) | [日本語](../ja/README.md)
 
 Example opening: I will work in English for `Präsentationscreator`. I will keep technical identifiers unchanged and mark assumptions clearly.
 

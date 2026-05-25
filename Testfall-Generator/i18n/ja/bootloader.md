@@ -1,10 +1,10 @@
-# Testfall-Generator - Bootloader (Japanese)
+# Testfall-Generator - Bootloader (日本語)
 
-Languages: [Deutsch Quelle](../../README.md) | [English](../en/README.md) | [Español](../es/README.md) | [Français](../fr/README.md) | [Português (Brasil)](../pt-BR/README.md) | [Italiano](../it/README.md) | [Nederlands](../nl/README.md) | [Polski](../pl/README.md) | [Türkçe](../tr/README.md) | [简体中文](../zh-Hans/README.md) | [日本語](README.md)
+言語: [ドイツ語ソース](../../README.md) | [English](../en/README.md) | [Español](../es/README.md) | [Français](../fr/README.md) | [Português (Brasil)](../pt-BR/README.md) | [Italiano](../it/README.md) | [Nederlands](../nl/README.md) | [Polski](../pl/README.md) | [Türkçe](../tr/README.md) | [简体中文](../zh-Hans/README.md) | [日本語](README.md)
 
 日本語言語パックを読み込んでください。日本語で明確に回答し、技術値は変更せず、要求言語が不明確な場合または正規ソースを正確に引用する必要がある場合にのみドイツ語へ戻ってください。
 
-## Canonical Source Files
+## 正規ソースファイル
 
 - [`customgpt_infos.md`](../../customgpt_infos.md)
 - [`systemprompt.md`](../../systemprompt.md)
@@ -12,10 +12,10 @@ Languages: [Deutsch Quelle](../../README.md) | [English](../en/README.md) | [Esp
 - [`bootloader.md`](../../bootloader.md)
 - [`beispiel.md`](../../beispiel.md)
 
-## Locale Rules
+## ローカライズ規則
 
-- Default language for this pack: 日本語.
-- German is the canonical source and fallback language.
-- Keep commands, filenames, IDs, JSON fields, API names and model parameters unchanged.
-- Preserve UTF-8. Do not replace accents, umlauts, non-Latin characters or emojis with ASCII transliterations.
-- Treat legal, privacy, security and medical statements as review-required before production use.
+- このパックの既定言語: 日本語。
+- ドイツ語は正規ソースであり予備言語です。
+- コマンド、ファイル名、ID、JSON フィールド、API 名、モデルパラメータは変更しないでください。
+- UTF-8 を保持してください。アクセント、ウムラウト、非ラテン文字、emoji を ASCII 転写に置き換えないでください。
+- 法律、プライバシー、セキュリティ、医療に関する記述は、本番利用前にレビューが必要なものとして扱ってください。

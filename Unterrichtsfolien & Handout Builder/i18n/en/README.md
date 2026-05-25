@@ -1,6 +1,6 @@
 # Unterrichtsfolien & Handout Builder - English language pack
 
-Languages: [Deutsch Quelle](../../README.md) | [English](README.md) | [Español](../es/README.md) | [Français](../fr/README.md) | [Português (Brasil)](../pt-BR/README.md) | [Italiano](../it/README.md) | [Nederlands](../nl/README.md) | [Polski](../pl/README.md) | [Türkçe](../tr/README.md) | [简体中文](../zh-Hans/README.md) | [日本語](../ja/README.md)
+Languages: [German source](../../README.md) | [English](README.md) | [Español](../es/README.md) | [Français](../fr/README.md) | [Português (Brasil)](../pt-BR/README.md) | [Italiano](../it/README.md) | [Nederlands](../nl/README.md) | [Polski](../pl/README.md) | [Türkçe](../tr/README.md) | [简体中文](../zh-Hans/README.md) | [日本語](../ja/README.md)
 
 This folder contains the English product components for `Unterrichtsfolien & Handout Builder`. German remains the canonical source language; this pack gives users a direct English entry point while preserving technical identifiers, filenames, model parameters and import formats.
 

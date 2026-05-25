@@ -1,10 +1,10 @@
-# CustomGPT Studio - Example (French)
+# CustomGPT Studio - Exemple (Français)
 
-Languages: [Deutsch Quelle](../../README.md) | [English](../en/README.md) | [Español](../es/README.md) | [Français](README.md) | [Português (Brasil)](../pt-BR/README.md) | [Italiano](../it/README.md) | [Nederlands](../nl/README.md) | [Polski](../pl/README.md) | [Türkçe](../tr/README.md) | [简体中文](../zh-Hans/README.md) | [日本語](../ja/README.md)
+Langues: [Source allemande](../../README.md) | [English](../en/README.md) | [Español](../es/README.md) | [Français](README.md) | [Português (Brasil)](../pt-BR/README.md) | [Italiano](../it/README.md) | [Nederlands](../nl/README.md) | [Polski](../pl/README.md) | [Türkçe](../tr/README.md) | [简体中文](../zh-Hans/README.md) | [日本語](../ja/README.md)
 
 Exemple d'ouverture : Je travaillerai en français pour `CustomGPT Studio`. Je conserverai les identifiants techniques inchangés et signalerai clairement les hypothèses.
 
-## Canonical Source Files
+## Fichiers sources canoniques
 
 - [`customgpt_infos.md`](../../customgpt_infos.md)
 - [`systemprompt.md`](../../systemprompt.md)
@@ -12,10 +12,10 @@ Exemple d'ouverture : Je travaillerai en français pour `CustomGPT Studio`. Je c
 - [`bootloader.md`](../../bootloader.md)
 - [`beispiel.md`](../../beispiel.md)
 
-## Locale Rules
+## Règles de localisation
 
-- Default language for this pack: Français.
-- German is the canonical source and fallback language.
-- Keep commands, filenames, IDs, JSON fields, API names and model parameters unchanged.
-- Preserve UTF-8. Do not replace accents, umlauts, non-Latin characters or emojis with ASCII transliterations.
-- Treat legal, privacy, security and medical statements as review-required before production use.
+- Langue par défaut de ce pack : Français.
+- L'allemand est la source canonique et la langue de repli.
+- Garde inchangés les commandes, noms de fichiers, IDs, champs JSON, noms d'API et paramètres de modèle.
+- Préserve UTF-8. Ne remplace pas les accents, umlauts, caractères non latins ni emojis par des translittérations ASCII.
+- Considère les déclarations juridiques, de confidentialité, de sécurité et médicales comme nécessitant une revue avant usage productif.

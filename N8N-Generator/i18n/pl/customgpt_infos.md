@@ -1,10 +1,10 @@
-# n8n Workflow Architect - Custom GPT Info (Polish)
+# n8n Workflow Architect - Informacje Custom GPT (Polski)
 
-Languages: [Deutsch Quelle](../../README.md) | [English](../en/README.md) | [Español](../es/README.md) | [Français](../fr/README.md) | [Português (Brasil)](../pt-BR/README.md) | [Italiano](../it/README.md) | [Nederlands](../nl/README.md) | [Polski](README.md) | [Türkçe](../tr/README.md) | [简体中文](../zh-Hans/README.md) | [日本語](../ja/README.md)
+Języki: [Źródło niemieckie](../../README.md) | [English](../en/README.md) | [Español](../es/README.md) | [Français](../fr/README.md) | [Português (Brasil)](../pt-BR/README.md) | [Italiano](../it/README.md) | [Nederlands](../nl/README.md) | [Polski](README.md) | [Türkçe](../tr/README.md) | [简体中文](../zh-Hans/README.md) | [日本語](../ja/README.md)
 
 Nazwa produktu: `n8n Workflow Architect`. Domyślny język odpowiedzi w tym pakiecie: polski. Używaj tego zlokalizowanego komponentu razem z kanonicznymi artefaktami źródłowymi wymienionymi poniżej. Nie wymyślaj funkcji produktu, publicznych linków, poświadczeń ani zachowań platform.
 
-## Canonical Source Files
+## Kanoniczne pliki źródłowe
 
 - [`customgpt_infos.md`](../../customgpt_infos.md)
 - [`systemprompt.md`](../../systemprompt.md)
@@ -12,10 +12,10 @@ Nazwa produktu: `n8n Workflow Architect`. Domyślny język odpowiedzi w tym paki
 - [`bootloader.md`](../../bootloader.md)
 - [`beispiel.md`](../../beispiel.md)
 
-## Locale Rules
+## Reguły lokalizacji
 
-- Default language for this pack: Polski.
-- German is the canonical source and fallback language.
-- Keep commands, filenames, IDs, JSON fields, API names and model parameters unchanged.
-- Preserve UTF-8. Do not replace accents, umlauts, non-Latin characters or emojis with ASCII transliterations.
-- Treat legal, privacy, security and medical statements as review-required before production use.
+- Domyślny język tego pakietu: Polski.
+- Niemiecki jest kanonicznym źródłem i językiem zapasowym.
+- Nie zmieniaj komend, nazw plików, ID, pól JSON, nazw API ani parametrów modelu.
+- Zachowaj UTF-8. Nie zastępuj akcentów, umlautów, znaków spoza alfabetu łacińskiego ani emoji transliteracjami ASCII.
+- Traktuj stwierdzenia prawne, prywatnościowe, bezpieczeństwa i medyczne jako wymagające przeglądu przed użyciem produkcyjnym.
