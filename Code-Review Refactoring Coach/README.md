@@ -1,5 +1,7 @@
 # Code-Review Refactoring Coach
 
+Sprachen: [Deutsch](README.md) | [English](README.en.md)
+
 Lokaler Projektordner für einen Custom GPT zur strukturierten Code-Review-, Refactoring- und Wartbarkeitsanalyse.
 
 ## Status

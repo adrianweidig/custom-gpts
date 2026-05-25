@@ -1,5 +1,7 @@
 # Unterrichtsfolien & Handout Builder
 
+Sprachen: [Deutsch](README.md) | [English](README.en.md)
+
 Lokaler Projektordner für den öffentlichen GPT `Unterrichtsfolien & Handout Builder`.
 
 ## ChatGPT-Link

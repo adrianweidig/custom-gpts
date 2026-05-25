@@ -1,5 +1,7 @@
 # KI-Integration Sicherheitsberater
 
+Sprachen: [Deutsch](README.md) | [English](README.en.md)
+
 Lokaler Projektordner für den öffentlichen GPT `KI-Integration Sicherheitsberater`.
 
 ## ChatGPT-Link

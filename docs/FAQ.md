@@ -1,5 +1,7 @@
 # FAQ
 
+Sprachen: [Deutsch](de/FAQ.md) | [English](en/FAQ.md)
+
 ## Ist dieses Repository eine installierbare Anwendung?
 
 Nein. Es ist eine Markdown- und Asset-Sammlung für mehrere Custom-GPT-Konfigurationen.

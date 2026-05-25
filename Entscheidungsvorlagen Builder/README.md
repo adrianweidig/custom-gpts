@@ -1,5 +1,7 @@
 # Entscheidungsvorlagen Builder
 
+Sprachen: [Deutsch](README.md) | [English](README.en.md)
+
 Lokaler Projektordner für einen Custom GPT zur Erstellung klarer Entscheidungsunterlagen, Optionenvergleiche und Management-Memos.
 
 ## Status
