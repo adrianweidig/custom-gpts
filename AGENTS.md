@@ -46,7 +46,9 @@ Der GitHub-Workflow `Repository Health` prüft zentrale Community-Dateien sowie 
 
 - Kleine, zielgenaue Änderungen mit minimalem Diff.
 - Deutsche Fließtexte mit echten UTF-8-Umlauten schreiben.
+- Keine ASCII-Umschreibungen deutscher Umlaute in Fließtexten verwenden, z. B. `vollstaendig`, `fuer`, `ueber`, `pruefen`, `unterstuetzt` statt `vollständig`, `für`, `über`, `prüfen`, `unterstützt`.
 - Technische Slugs, IDs, Dateinamen, URLs und Modellparameter nicht blind eindeutschen.
+- Dateien als UTF-8 ohne unnötige Encoding-Wechsel pflegen; `.editorconfig` und `.gitattributes` sind dafür verbindlich.
 - Prompt-Artefakte eines GPTs gemeinsam betrachten: `README.md`, `customgpt_infos.md`, `systemprompt.md`, `fachwissen.md`, `bootloader.md` und vorhandene `beispiel.*` Dateien.
 - Neue oder grundlegend überarbeitete GPT-Pakete sollen mindestens ein Beispielartefakt enthalten: `beispiel.md` für Musterantworten oder passende `beispiel.*` Dateien für konkrete Code-, JSON-, HTML- oder Dokumentartefakte.
 - Beispielartefakte müssen vollständig, realistisch und frei von echten Secrets, Kundendaten oder personenbezogenen Daten sein.
