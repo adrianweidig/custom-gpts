@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Sicherheitsproblem melden
+    url: https://github.com/adrianweidig/custom-gpts/security/policy
+    about: Bitte poste sensible Schwachstellendetails nicht öffentlich als Issue. Do not post sensitive vulnerability details publicly.
+  - name: Support-Hinweise lesen
+    url: https://github.com/adrianweidig/custom-gpts/blob/main/SUPPORT.md
+    about: Prüfe zuerst, welche Anfragen in diesem Repository sinnvoll sind.
+  - name: Read support notes in English
+    url: https://github.com/adrianweidig/custom-gpts/blob/main/SUPPORT.en.md
+    about: Check which requests are suitable for this repository.

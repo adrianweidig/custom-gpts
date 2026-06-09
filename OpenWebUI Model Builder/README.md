@@ -1,5 +1,7 @@
 # OpenWebUI Model Builder
 
+Sprachen: [Deutsch](README.md) | [English](README.en.md)
+
 Lokaler Projektordner für den öffentlichen GPT `OpenWebUI Model Builder`.
 
 ## ChatGPT-Link
@@ -16,6 +18,7 @@ Dieser GPT erstellt vollständige OpenWebUI-Modellpakete für konkrete Aufgabenm
 - `fachwissen.md`: fachliche Regeln und Strukturwissen für OpenWebUI-Modelle.
 - `systemprompt.md`: Steuerlogik für Erstellung, Grenzen und Entscheidungsregeln.
 - `bootloader.md`: kompakte Einbindung der Kernlogik für GPT-Hinweise.
+- `beispiel.md`: vollständiges Muster-Modellpaket mit `model.json`, Prompt- und Antwortbeispiel.
 - `icon.png`: Symbolgrafik für die GPT-Darstellung.
 - `Problemfälle/`: Beispielsammlung und Sonderfälle für problematische oder grenzwertige Modellkonstellationen.
 

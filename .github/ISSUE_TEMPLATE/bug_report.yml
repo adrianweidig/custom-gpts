@@ -1,0 +1,43 @@
+name: Fehler melden / Report a bug
+description: Melde defekte Links, falsche Dokumentation oder ein reproduzierbares Problem in einem GPT-Artefakt. English reports are welcome.
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Danke für den Hinweis. English reports are welcome. Bitte poste keine Secrets, Tokens, Passwörter, Kundendaten oder privaten Informationen.
+  - type: input
+    id: affected-area
+    attributes:
+      label: Betroffener Bereich / Affected area
+      description: Nenne Ordner oder Datei, zum Beispiel `OpenWebUI Model Builder/systemprompt.md`.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / Problem
+      description: Was ist falsch, unklar oder defekt? You may write in German or English.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Erwartetes Verhalten oder erwartete Information / Expected behavior or information
+      description: Was sollte stattdessen passieren oder dokumentiert sein?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Reproduktion oder Beleg / Reproduction or evidence
+      description: Schritte, Link, Dateiausschnitt oder Screenshot ohne sensible Inhalte.
+    validations:
+      required: false
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Sicherheitscheck / Safety check
+      options:
+        - label: Ich habe keine Secrets, Tokens, Passwörter, Kundendaten oder personenbezogenen Daten eingefügt. / I have not included secrets, tokens, passwords, customer data or personal data.
+          required: true

@@ -1,5 +1,7 @@
 # n8n Workflow Architect
 
+Sprachen: [Deutsch](README.md) | [English](README.en.md)
+
 Lokaler Projektordner für den öffentlichen GPT `n8n Workflow Architect`.
 
 ## ChatGPT-Link
@@ -16,6 +18,7 @@ Dieser GPT übersetzt natürlichsprachliche Anforderungen in importierbare n8n-W
 - `fachwissen.md`: Regeln, Terminologie und Fachlogik rund um n8n, Nodes, Credentials und Sicherheitsgrenzen.
 - `systemprompt.md`: Kernverhalten für Analyse, Rückfragen und JSON-Erzeugung.
 - `bootloader.md`: kompakte Steuerdatei für die GPT-Hinweise.
+- `beispiel.md`: importnahes Muster für einen sicheren n8n-Workflow-Entwurf mit Testdaten.
 - `icon.png`: Symbolgrafik für die GPT-Darstellung.
 
 ## Typische Nutzung

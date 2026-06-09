@@ -55,7 +55,7 @@ Ein professioneller Custom GPT soll nicht möglichst viel behaupten, sondern zuv
 
 ---
 
-## 4. Die Vier-Dateien-Architektur
+## 4. Kernartefakt-Architektur mit Beispiel
 
 ### 4.1 `customgpt_infos.md`
 
@@ -134,6 +134,19 @@ Sie muss:
 - keine langen Fachinhalte enthalten
 - nicht den Systemprompt ersetzen
 
+### 4.5 `beispiel.md` oder `beispiel.*`
+
+Diese Datei ist das Musterartefakt für erwartete Ergebnisqualität.
+
+Sie enthält je nach GPT-Typ:
+
+- eine vollständige Beispielantwort als `beispiel.md`
+- ein Musterformular oder Musterbriefing
+- bei Programmier-GPTs eine oder mehrere fertige Beispieldateien wie `beispiel.py`, `beispiel.html`, `beispiel.java`, `beispiel.json` oder passende Tests
+- bei Generator-GPTs ein direkt verwendbares Musterergebnis
+
+Das Beispiel dient lokalen Modellen und späteren Nutzern als Qualitätsanker. Es darf keine echten Secrets, Kundendaten oder personenbezogenen Daten enthalten.
+
 ---
 
 ## 5. Standardstruktur eines Custom-GPT-Projektpakets
@@ -144,8 +157,9 @@ Ein vollständiges Projektpaket soll immer folgende Reihenfolge nutzen:
 2. `fachwissen.md`
 3. `systemprompt.md`
 4. `bootloader.md`
-5. kurze Einrichtungsanleitung
-6. abschließende Frage zur Icon-Erzeugung
+5. `beispiel.md` oder passende `beispiel.*` Dateien
+6. kurze Einrichtungsanleitung
+7. abschließende Frage zur Icon-Erzeugung
 
 Wenn echte Dateien erstellt werden können, sollen sie zusätzlich als Download bereitgestellt werden. Wenn möglich, soll ein ZIP-Archiv erstellt werden.
 
@@ -224,11 +238,12 @@ Der GPT soll sparsam mit Rückfragen umgehen.
 | Keine Abgrenzung | GPT übernimmt unpassende Aufgaben | Nicht-Aufgaben und Grenzen definieren |
 | Kein Fachwissen | GPT halluziniert leichter | `fachwissen.md` strukturieren und verpflichtend einbinden |
 | Zu langer Bootloader | Instructions werden unübersichtlich | Bootloader kompakt halten |
-| Vermischte Dateien | Wartung wird schwierig | Vier-Dateien-Architektur einhalten |
+| Vermischte Dateien | Wartung wird schwierig | Kernartefakt-Architektur mit Beispiel einhalten |
 | Keine Rückfragenlogik | GPT fragt zu viel oder zu wenig | Rückfragenregeln definieren |
 | Keine Sicherheitsregeln | Risiko problematischer Ausgaben | Ablehnungskriterien aufnehmen |
 | Zu viele Versprechen | Nutzer erwartet unrealistische Fähigkeiten | Fähigkeiten realistisch beschreiben |
 | Fehlende Testfälle | Qualität schwer prüfbar | Testfälle in `customgpt_infos.md` aufnehmen |
+| Fehlendes Beispielartefakt | Lokale Modelle und Nutzer haben keinen Qualitätsanker | `beispiel.md` oder passende `beispiel.*` Datei ergänzen |
 
 ---
 
@@ -519,11 +534,12 @@ Vor Ausgabe muss geprüft werden:
 
 | Prüfung | Frage |
 |---|---|
-| Vollständigkeit | Sind alle vier Dateien vorhanden? |
+| Vollständigkeit | Sind alle Kernartefakte und mindestens eine Beispieldatei vorhanden? |
 | Konsistenz | Widersprechen sich die Dateien? |
 | Zweckbezug | Passt alles zum Anwendungsfall? |
 | Bootloader-Länge | Ist `bootloader.md` unter 8000 Zeichen? |
 | Wissensbindung | Verweist `systemprompt.md` verpflichtend auf `fachwissen.md`? |
+| Beispielqualität | Zeigt `beispiel.md` oder `beispiel.*` ein vollständiges Musterergebnis? |
 | Nutzbarkeit | Kann der Nutzer die Dateien direkt verwenden? |
 | Sicherheit | Sind problematische Nutzungen abgegrenzt? |
 | Annahmen | Sind Annahmen transparent markiert? |
@@ -537,7 +553,7 @@ Vor Ausgabe muss geprüft werden:
 ### Gutes Muster bei klarem Anwendungsfall
 
 - keine unnötigen Rückfragen
-- vollständige vier Dateien
+- vollständige Kernartefakte plus Beispieldatei
 - konkrete Fachwissensstruktur
 - klare Tools
 - klare Grenzen

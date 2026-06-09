@@ -1,5 +1,7 @@
 # Präsentationscreator
 
+Sprachen: [Deutsch](README.md) | [English](README.en.md)
+
 Lokaler Projektordner für den öffentlichen GPT `Präsentationscreator`.
 
 ## ChatGPT-Link
@@ -16,6 +18,7 @@ Dieser GPT erstellt browserbasierte Präsentationen, die sich wie eine moderne W
 - `fachwissen.md`: Qualitätsmaßstab, Strukturwissen und Leitplanken für gute Web-Präsentationen.
 - `systemprompt.md`: zentrale Logik für Rollenbild, Designanspruch, Ausgabeformat und technische Regeln.
 - `bootloader.md`: kompakte operative Steuerdatei für die GPT-Hinweise.
+- `beispiel.md`: Mustervorlage für Konzept, Folienstruktur und HTML-Ausschnitt.
 
 ## Typische Nutzung
 

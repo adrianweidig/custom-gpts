@@ -1,0 +1,39 @@
+name: Verbesserung vorschlagen / Suggest an improvement
+description: Schlage eine fachliche, dokumentarische oder strukturelle Verbesserung vor. English suggestions are welcome.
+title: "[Idea]: "
+body:
+  - type: input
+    id: affected-area
+    attributes:
+      label: Betroffener Bereich / Affected area
+      description: Nenne GPT-Ordner, Datei oder Repository-Bereich.
+    validations:
+      required: true
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation / Motivation
+      description: Welches Problem löst die Änderung? You may write in German or English.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Vorschlag / Proposal
+      description: Beschreibe die gewünschte Änderung konkret.
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Auswirkungen / Impact
+      description: Welche Prompt-Artefakte, Zielgruppen oder Nutzungswege könnten betroffen sein?
+    validations:
+      required: false
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope / Scope
+      options:
+        - label: Der Vorschlag verändert keine öffentlichen Plattform-Zugangsdaten und enthält keine sensiblen Informationen. / This proposal does not change public platform credentials and contains no sensitive information.
+          required: true

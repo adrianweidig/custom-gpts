@@ -1,89 +1,200 @@
 # CustomGPTs
 
-Sammlung mehrerer Custom-GPT-Konfigurationen, Prompt-Artefakte und Begleitdokumente. Das Repository ist so aufgebaut, dass die einzelnen GPTs sowohl direkt über ChatGPT genutzt als auch lokal anhand ihrer Prompt- und Wissensdateien nachvollzogen, angepasst und weiterentwickelt werden können.
+Sprachen: [Deutsch](README.md) | [English](README.en.md)
+
+> **Maintenance-Status seit 24. Mai 2026:** Dieses Repository ist als öffentliche Referenz- und Vorlagensammlung abgeschlossen. Es findet keine aktive Weiterentwicklung mehr statt. Inhalte bleiben nutzbar, Issues und Pull Requests werden nicht verbindlich bearbeitet.
+
+![CustomGPTs repository overview](docs/assets/repository-hero.png)
+
+[![Repository Health](https://github.com/adrianweidig/custom-gpts/actions/workflows/repository-health.yml/badge.svg)](https://github.com/adrianweidig/custom-gpts/actions/workflows/repository-health.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Issues](https://img.shields.io/github/issues/adrianweidig/custom-gpts)](https://github.com/adrianweidig/custom-gpts/issues)
+[![Pull Requests](https://img.shields.io/github/issues-pr/adrianweidig/custom-gpts)](https://github.com/adrianweidig/custom-gpts/pulls)
+
+Kuratiertes Repository für öffentliche Custom-GPT-Konfigurationen, Systemprompts, Wissensdateien, Bootloader, Icons und Begleitdokumentation.
+
+Dieses Projekt ist kein installierbares Softwarepaket und keine zentrale Anwendung. Es ist eine nachvollziehbare Sammlung von GPT-Artefakten, die direkt über ChatGPT genutzt oder lokal geprüft, angepasst und weiterentwickelt werden können.
+
+## Schnellzugriff
+
+- [GPT-Übersicht](#öffentliche-chatgpt-links)
+- [Repository-Struktur](#repository-struktur)
+- [Lokale Nutzung](#lokale-nutzung)
+- [Internationalisierung](#internationalisierung)
+- [Qualitätschecks](#qualitätschecks)
+- [Mitwirken](CONTRIBUTING.md)
+- [English README](README.en.md)
+- [Security Policy](SECURITY.md)
+- [Support](SUPPORT.md)
+- [Changelog](CHANGELOG.md)
+
+## Für wen ist dieses Repository gedacht?
+
+- Menschen, die robuste Custom-GPT-Konfigurationen nachvollziehen oder weiterentwickeln möchten.
+- Teams, die Prompt-, Wissens- und Bootloader-Artefakte sauber versionieren wollen.
+- Nutzerinnen und Nutzer, die die öffentlichen GPTs direkt über ChatGPT einsetzen möchten.
+- Maintainer, die einzelne GPT-Pakete fachlich prüfen, konsistent halten oder kollaborativ verbessern wollen.
+
+## Was ist enthalten?
+
+| Bereich | Zweck |
+|---|---|
+| Prompt- und Systemdateien | Rollenlogik, Grenzen, Antwortqualität und Steuerverhalten der GPTs |
+| Wissensdateien | Fachliche Regeln, Qualitätsmaßstäbe und Strukturwissen |
+| Bootloader | Kompakte Hinweise für GPT-Instructions |
+| GPT-Metadaten | Positionierung, Zielgruppen, Gesprächsaufhänger und Einsatzgebiete |
+| Icons | Symbolgrafiken für einzelne GPTs, sofern vorhanden |
+| Problemfälle | Offline-orientierte Briefings für typische OpenWebUI-Modellaufgaben |
+| Beispielartefakte | Musterantworten oder fertige Beispiel-Dateien wie `beispiel.md`, `beispiel.py` oder `beispiel_test.py` |
 
 ## Öffentliche ChatGPT-Links
 
 | GPT | ChatGPT-Link | Lokaler Ordner |
 |---|---|---|
-| PromptForge | https://chatgpt.com/g/g-6a0ac654618c81919f30c2da2be089c8-promptforge | `Promptgenerator` |
-| Unterrichtsfolien & Handout Builder | https://chatgpt.com/g/g-6a071be465ac8191b27a4b5fb5789b0a-unterrichtsfolien-handout-builder | `Unterrichtsfolien & Handout Builder` |
-| OpenWebUI Model Builder | https://chatgpt.com/g/g-6a070eda8fdc81918ab61d4c4f1aa136-openwebui-model-builder | `OpenWebUI Model Builder` |
-| n8n Workflow Architect | https://chatgpt.com/g/g-6a06f5d8d0ac81918ce368d8db8a9bf5-n8n-workflow-architect | `N8N-Generator` |
-| CustomGPT Studio | https://chatgpt.com/g/g-6a06ef9be6fc819197d7b815debd0f57-customgpt-studio | `Custom-GPT-Generator` |
-| KI-Integration Sicherheitsberater | https://chatgpt.com/g/g-6a06d83ba4808191bffb12f7aa4b043b-ki-integration-sicherheitsberater | `KI-Integration Sicherheitsberater` |
-| Präsentationscreator | https://chatgpt.com/g/g-69fdf8ef05c08191bb3a5454c597baa7-prasentationscreator | `Präsentationscreator` |
+| PromptForge | https://chatgpt.com/g/g-6a0ac654618c81919f30c2da2be089c8-promptforge | [`Promptgenerator`](Promptgenerator/README.md) |
+| Unterrichtsfolien & Handout Builder | https://chatgpt.com/g/g-6a071be465ac8191b27a4b5fb5789b0a-unterrichtsfolien-handout-builder | [`Unterrichtsfolien & Handout Builder`](Unterrichtsfolien%20%26%20Handout%20Builder/README.md) |
+| OpenWebUI Model Builder | https://chatgpt.com/g/g-6a070eda8fdc81918ab61d4c4f1aa136-openwebui-model-builder | [`OpenWebUI Model Builder`](OpenWebUI%20Model%20Builder/README.md) |
+| n8n Workflow Architect | https://chatgpt.com/g/g-6a06f5d8d0ac81918ce368d8db8a9bf5-n8n-workflow-architect | [`N8N-Generator`](N8N-Generator/README.md) |
+| CustomGPT Studio | https://chatgpt.com/g/g-6a06ef9be6fc819197d7b815debd0f57-customgpt-studio | [`Custom-GPT-Generator`](Custom-GPT-Generator/README.md) |
+| KI-Integration Sicherheitsberater | https://chatgpt.com/g/g-6a06d83ba4808191bffb12f7aa4b043b-ki-integration-sicherheitsberater | [`KI-Integration Sicherheitsberater`](KI-Integration%20Sicherheitsberater/README.md) |
+| Präsentationscreator | https://chatgpt.com/g/g-69fdf8ef05c08191bb3a5454c597baa7-prasentationscreator | [`Präsentationscreator`](Präsentationscreator/README.md) |
 
-## Schnellstart
+## Weitere konzipierte GPT-Pakete
 
-1. Einen GPT in der Tabelle oben oder über die Projektübersicht unten auswählen.
-2. Die jeweilige `README.md` im Unterordner lesen.
-3. Danach `customgpt_infos.md`, `systemprompt.md` und die Fachdateien des Projekts durchgehen.
-4. Für die direkte Live-Nutzung den passenden ChatGPT-Link öffnen.
+Diese Pakete sind lokal vollständig vorbereitet, haben aber noch keinen öffentlichen ChatGPT-Link.
 
-## Voraussetzungen
+| GPT-Paket | Schwerpunkt | Lokaler Ordner |
+|---|---|---|
+| Code Review Coach | Code-Review, Refactoring, Security- und Testlückenanalyse | [`Code-Review Refactoring Coach`](Code-Review%20Refactoring%20Coach/README.md) |
+| TestCase Studio | Testfallableitung aus Anforderungen, User Stories und Bugreports | [`Testfall-Generator`](Testfall-Generator/README.md) |
+| Research Briefing Builder | Recherche-Briefings, Quellenvergleich und Unsicherheitsmarkierung | [`Research Briefing Builder`](Research%20Briefing%20Builder/README.md) |
+| Decision Memo Builder | Entscheidungsvorlagen, Optionenvergleiche und Management-Memos | [`Entscheidungsvorlagen Builder`](Entscheidungsvorlagen%20Builder/README.md) |
 
-- Für die Live-Nutzung wird ein ChatGPT-Konto benötigt.
-- Für die lokale Prüfung reicht ein Markdown-Editor oder ein Texteditor.
-- Für eigene Anpassungen sollten die jeweiligen `README.md`-, `systemprompt.md`- und Fachdateien gemeinsam betrachtet werden.
-- Secrets, Tokens und Zugangsdaten dürfen nicht in dieses Repository eingetragen werden.
+## Repository-Struktur
 
-## Projektübersicht
+| Pfad | Inhalt |
+|---|---|
+| [`Code-Review Refactoring Coach/`](Code-Review%20Refactoring%20Coach/README.md) | GPT-Paket für Code-Review, Refactoring und Tests inklusive Beispielcode |
+| [`Custom-GPT-Generator/`](Custom-GPT-Generator/README.md) | Artefakte für `CustomGPT Studio`, einen GPT zum Entwurf vollständiger Custom-GPT-Pakete |
+| [`Entscheidungsvorlagen Builder/`](Entscheidungsvorlagen%20Builder/README.md) | GPT-Paket für Entscheidungsvorlagen, Optionenvergleiche und Management-Memos |
+| [`KI-Integration Sicherheitsberater/`](KI-Integration%20Sicherheitsberater/README.md) | Sicherheits- und Governance-GPT für KI-Einführung, Automatisierung und Betriebsmodelle |
+| [`N8N-Generator/`](N8N-Generator/README.md) | GPT für importierbare n8n-Workflow-JSONs mit Sicherheitsannahmen und Testhinweisen |
+| [`OpenWebUI Model Builder/`](OpenWebUI%20Model%20Builder/README.md) | GPT für OpenWebUI-Aufgabenmodelle, Modellpakete und Wissensdateien |
+| [`OpenWebUI Model Builder/Problemfälle/`](OpenWebUI%20Model%20Builder/Problemf%C3%A4lle/README.md) | Kuratierte Briefings für häufige OpenWebUI-Einsatzfälle |
+| [`Promptgenerator/`](Promptgenerator/README.md) | Artefakte für `PromptForge`, einen GPT für robuste Promptvorlagen |
+| [`Präsentationscreator/`](Präsentationscreator/README.md) | GPT für browserbasierte, präsentationsfähige Web-Präsentationen |
+| [`Research Briefing Builder/`](Research%20Briefing%20Builder/README.md) | GPT-Paket für Recherche-Briefings und Quellenbewertung |
+| [`Testfall-Generator/`](Testfall-Generator/README.md) | GPT-Paket für Testfall-Design und QA-Vorbereitung |
+| [`Unterrichtsfolien & Handout Builder/`](Unterrichtsfolien%20%26%20Handout%20Builder/README.md) | GPT für Unterrichtsfolien und druckbare Handouts |
 
-### Promptgenerator
+## Lokale Nutzung
 
-Lokaler Projektordner für den öffentlichen GPT `PromptForge`. Schwerpunkt ist die Erzeugung direkt nutzbarer Markdown-Promptvorlagen für ChatGPT, Custom GPTs, OpenWebUI, lokale LLMs und API-Workflows.
+Für die meisten Inhalte ist keine Installation nötig.
 
-### Unterrichtsfolien & Handout Builder
+1. Repository klonen oder lokal öffnen.
+2. Einen GPT-Ordner aus der Übersicht auswählen.
+3. Zuerst die jeweilige `README.md` lesen.
+4. Danach `customgpt_infos.md`, `systemprompt.md`, `fachwissen.md`, `bootloader.md` und vorhandene `beispiel.*` Dateien gemeinsam prüfen.
+5. Für die direkte Live-Nutzung den passenden ChatGPT-Link aus der Tabelle öffnen.
 
-Projekt für die Erstellung didaktisch aufbereiteter Unterrichtspräsentationen und druckbarer Handouts aus Curricula, Folien, Fachquellen und Notizen.
+Die einzelnen Artefakte haben unterschiedliche Rollen:
 
-### OpenWebUI Model Builder
+| Datei | Funktion |
+|---|---|
+| `customgpt_infos.md` | Name, Positionierung, Zielgruppe, Einsatzgebiete und Konfigurationshinweise |
+| `systemprompt.md` | Hauptlogik für Rolle, Verhalten, Grenzen und Ausgabequalität |
+| `fachwissen.md` | Fachliche Regeln und Strukturwissen |
+| `bootloader.md` | Kompakter Hinweistext für GPT-Instructions |
+| `beispiel.md` oder `beispiel.*` | Musterantwort, Musterdatei oder mehrere Beispielartefakte für die erwartete Ausgabequalität |
+| `icon.png` | Symbolgrafik, falls im jeweiligen Ordner vorhanden |
 
-Projekt für die Konzeption vollständiger OpenWebUI-Modellpakete inklusive `model.json`, Prompt-Dateien, Wissensbasis und optionaler Begleitdateien.
-Enthält zusätzlich die Sammlung `Problemfälle/` mit offline-orientierten Problemfall-Briefings für typische Aufgabenmodelle.
+## Internationalisierung
 
-### N8N-Generator
+Deutsch ist die Standardsprache des Repositorys. GitHub zeigt die normale Repository-Ansicht nicht automatisch abhängig von der Besuchersprache an; deshalb sind Sprachversionen explizit über Dateien und Links organisiert.
 
-Projekt für importierbare n8n-Workflow-JSONs inklusive Sicherheitsannahmen, Credential-Platzhaltern und Testhinweisen.
+- [`README.md`](README.md) ist die deutsche Startseite.
+- [`README.en.md`](README.en.md) ist die englische Startseite.
+- [`docs/de/`](docs/de/index.md) enthält die deutsche Dokumentationsroute.
+- [`docs/en/`](docs/en/index.md) enthält die englische Dokumentationsroute.
+- Englische Paketübersichten liegen als `README.en.md` neben den deutschen Paket-READMEs, sofern der Ordner für internationale Nutzer relevant ist.
+- Produktkomponenten liegen zusätzlich pro GPT unter `i18n/<sprachcode>/`, zum Beispiel [`Promptgenerator/i18n/en/`](Promptgenerator/i18n/en/README.md) oder [`OpenWebUI Model Builder/i18n/ja/`](OpenWebUI%20Model%20Builder/i18n/ja/README.md).
+- Direkt integrierte Produktsprachen sind Englisch, Spanisch, Französisch, Portugiesisch (Brasilien), Italienisch, Niederländisch, Polnisch, Türkisch, vereinfachtes Chinesisch und Japanisch.
+- Deutsch bleibt der stabile Fallback, wenn keine Sprache zuverlässig ermittelt oder gewünscht wird.
+- UTF-8 bleibt verbindlich; Umlaute, Akzente, nicht-lateinische Zeichen, Emojis und bidirektionale Texte dürfen nicht durch ASCII-Umschreibungen ersetzt werden.
 
-### Custom-GPT-Generator
+Die deutschen GPT-Artefakte bleiben die kanonischen fachlichen Quellartefakte. Die Sprachpakete stellen lokalisierte Systemprompt-, Bootloader-, Info-, Wissens- und Beispiel-Komponenten bereit und verweisen auf diese Quellen. Technische IDs, Dateinamen, Modellparameter und Importformate werden dabei nicht übersetzt.
 
-Projekt für den Entwurf vollständiger Custom-GPT-Pakete mit Struktur, Wissensbasis, Systemprompt und Bootloader.
+## Qualitätsgrenzen
 
-### KI-Integration Sicherheitsberater
+- Produktive Secrets, Tokens, Zugangsdaten, personenbezogene Daten und vertrauliche Kundendaten gehören nicht in dieses Repository.
+- GPT-Artefakte müssen vor produktiver Nutzung fachlich geprüft werden, insbesondere bei Unterricht, Sicherheit, Automatisierung, Datenschutz und OpenWebUI-Modellimporten.
+- Technische Slugs, Modell-IDs, Dateinamen, URLs und Parameter werden nicht automatisch eingedeutscht.
+- Externe Medien, Schriften, Skripte und veröffentlichte Assets müssen vor Nutzung auf Lizenz, Datenschutz und Verfügbarkeit geprüft werden.
 
-Projekt für sicherheitsbewusste Beratung zu KI-Einführung, Automatisierung, Agenten, Betriebsmodellen und Governance.
+## Entwicklung
 
-### Präsentationscreator
+Es gibt keinen zentralen Dev-Server, keinen Paketmanager und keinen Build-Prozess. Änderungen sind in der Regel Markdown-, Prompt- oder Asset-Arbeiten.
 
-Projekt für browserbasierte, präsentationsfähige Web-Präsentationen mit Storyline, Animationen und moderner Bedienlogik.
+Empfohlener Arbeitsablauf:
 
-## Ordnerstruktur
+1. Vor Änderungen `git status --short --branch` prüfen.
+2. Nur den betroffenen GPT-Unterordner ändern.
+3. Zusammengehörige Dateien eines GPTs gemeinsam betrachten.
+4. Beispielartefakte als Qualitätsanker pflegen: `beispiel.md` für Musterantworten, `beispiel.*` für konkrete Code- oder Dateiergebnisse.
+5. Keine echten Credentials, API-Keys oder Kundendaten in Beispiele übernehmen.
+6. Lokale Links, Tabellen, Überschriften und UTF-8-Umlaute prüfen.
 
-- `Custom-GPT-Generator/`: GPT zur Erstellung vollständiger Custom-GPT-Projektpakete.
-- `KI-Integration Sicherheitsberater/`: Beratungs-GPT für sichere KI- und Automatisierungseinführung.
-- `N8N-Generator/`: GPT für importierbare n8n-Workflow-JSONs.
-- `OpenWebUI Model Builder/`: GPT für OpenWebUI-Aufgabenmodelle und Modellpakete.
-- `OpenWebUI Model Builder/Problemfälle/`: kuratierte Briefings für häufige OpenWebUI-Einsatzfälle.
-- `Promptgenerator/`: GPT für robuste Promptvorlagen, öffentlich als `PromptForge`.
-- `Präsentationscreator/`: GPT für hochwertige browserbasierte Präsentationen.
-- `Unterrichtsfolien & Handout Builder/`: GPT für Unterrichtsfolien und druckbare Handouts.
+## Qualitätschecks
 
-## Struktur pro GPT
+Sichere lokale Prüfungen:
 
-Die Unterordner enthalten je nach GPT unter anderem:
+```powershell
+git status --short --branch
+git diff --check
+python scripts/generate_product_i18n.py
+python scripts/validate_repository_i18n.py
+```
 
-- `README.md` mit Zweck, Link und Dateierklärung
-- `systemprompt.md`
-- `bootloader.md`
-- `fachwissen.md`
-- `customgpt_infos.md`
-- `icon.png`
-- weitere spezialisierte Dateien je nach Projekt
+Der GitHub-Workflow [`Repository Health`](.github/workflows/repository-health.yml) prüft zusätzlich, ob zentrale Community-Dateien vorhanden sind und ob lokale Markdown-Links sowie referenzierte Bilder auf vorhandene Dateien zeigen.
 
-Nicht jeder Ordner enthält exakt alle Dateien. Manche Projekte haben zusätzliche Spezialdateien wie `fulldoc.md`, `layoutrichtlinien.md` oder Problemfall-Sammlungen.
+## Dokumentation
 
-## Hinweis
+- [Contribution Guide](CONTRIBUTING.md)
+- [Contribution Guide, English](CONTRIBUTING.en.md)
+- [Security Policy](SECURITY.md)
+- [Security Policy, English](SECURITY.en.md)
+- [Support](SUPPORT.md)
+- [Support, English](SUPPORT.en.md)
+- [Changelog](CHANGELOG.md)
+- [Changelog, English](CHANGELOG.en.md)
+- [Dokumentation Deutsch](docs/de/index.md)
+- [Documentation English](docs/en/index.md)
+- [FAQ](docs/de/FAQ.md)
+- [Release-Prozess](docs/de/RELEASE_PROCESS.md)
+- [Maintainer-Checkliste](docs/de/MAINTAINER_CHECKLIST.md)
+- [Internationalisierung](docs/de/I18N.md)
+- [Codex Project Readiness](CODEX_PROJECT_READINESS.md)
 
-Das Repository ist für Prompt-, Doku- und Konfigurationsartefakte gedacht. Produktive Secrets, Tokens oder Zugangsdaten gehören nicht in dieses Repository.
+## Mitwirken
+
+Dieses Repository wird seit dem 24. Mai 2026 nicht mehr aktiv weiterentwickelt. Beiträge können weiterhin als Hinweise, Forks oder Pull Requests eingereicht werden, es gibt aber keine verbindliche Zusage für Review, Merge oder Support.
+
+Geeignete Hinweise oder Beiträge sind zum Beispiel:
+
+- Korrekturen an Dokumentation, Links, Tabellen oder Begriffen
+- Verbesserungen an Prompt-Konsistenz und Struktur
+- fachlich begründete Ergänzungen zu Wissensdateien
+- neue oder verbesserte Problemfall-Briefings
+- Hinweise auf unklare Sicherheits-, Datenschutz- oder Lizenzstellen
+
+Details stehen in [`CONTRIBUTING.md`](CONTRIBUTING.md). Bitte melde Sicherheitsprobleme nicht öffentlich als Issue, sondern beachte [`SECURITY.md`](SECURITY.md).
+
+## Lizenz
+
+Dieses Repository steht unter der [MIT-Lizenz](LICENSE).
+
+Die Lizenzentscheidung ist keine Rechtsberatung. Bei kommerziell wichtigen GPT-Paketen, Markenfragen, Trainingsdaten, fremden Quellen oder veröffentlichten Assets sollte die Lizenzlage zusätzlich rechtlich geprüft werden.
+
+## Status
+
+Das Repository ist öffentlich, GitHub-synchron und als kuratierte Artefaktsammlung nutzbar. Seit dem 24. Mai 2026 gilt es als Referenzstand ohne aktive Weiterentwicklung. Der aktuelle technische Readiness-Stand ist in [`CODEX_PROJECT_READINESS.md`](CODEX_PROJECT_READINESS.md) dokumentiert.
