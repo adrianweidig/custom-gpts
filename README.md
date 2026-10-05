@@ -1,5 +1,8 @@
 # CustomGPTs
 
+> ab 21.06.2026 keine Änderungen mehr - aktueller Freeze-Zustand und keine weitere Bearbeitung
+
+
 Sprachen: [Deutsch](README.md) | [English](README.en.md)
 
 > **Maintenance-Status seit 24. Mai 2026:** Dieses Repository ist als öffentliche Referenz- und Vorlagensammlung abgeschlossen. Es findet keine aktive Weiterentwicklung mehr statt. Inhalte bleiben nutzbar, Issues und Pull Requests werden nicht verbindlich bearbeitet.
